@@ -7,7 +7,7 @@
     <div class="mb-4">
       <h3 class="text-xl font-black cartoon-title mb-1">{{ role }}</h3>
       <div class="text-pop-purple font-bold font-mono text-sm flex items-center gap-1">
-        <UTooltip text="Visit Company HQ 🏢" v-if="link">
+        <UTooltip text="Visit Company HQ" v-if="link">
           <a 
             :href="link" 
             target="_blank" 

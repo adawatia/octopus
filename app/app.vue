@@ -70,7 +70,7 @@ const handleNotify = () => {
                 to="https://github.com/adawatia"
                 target="_blank"
               >
-                GITHUB 👾
+                GITHUB <UIcon name="i-logos-github-icon" class="w-5 h-5 ml-2" />
               </UButton>
             </UTooltip>
           </div>
@@ -87,11 +87,11 @@ const handleNotify = () => {
             </h3>
             <p class="text-lg leading-loose font-medium text-gray-800 mb-6">
               I am a <span class="font-bold text-pop-purple">Backend Developer</span> specializing in scalable API architecture and cloud infrastructure. Check out my work on 
-              <UTooltip text="Check my code 💻">
+              <UTooltip text="Check my code">
                 <a href="https://github.com/adawatia" class="underline decoration-pop-cyan decoration-4" target="_blank">GitHub</a>
               </UTooltip>
                or connect with me on 
-              <UTooltip text="Let's connect! 🤝">
+              <UTooltip text="Let's connect!">
                 <a href="https://linkedin.com/in/adawatia" class="underline decoration-pop-pink decoration-4" target="_blank">LinkedIn</a>
               </UTooltip>.
             </p>
@@ -99,17 +99,17 @@ const handleNotify = () => {
               Proficient in Python (FastAPI, Django) and orchestrating containerized workloads on AWS and GCP. Experienced in engineering robust server-side solutions and integrating production-grade AI pipelines.
             </p>
             <div class="flex flex-wrap gap-2 mt-4">
-               <UTooltip text="Black Belt in coding? 🥋">
+               <UTooltip text="Black Belt in coding?">
                  <span class="px-3 py-1 bg-gray-100 border border-black rounded font-bold text-sm cursor-default flex items-center gap-1">
-                   <UIcon name="i-fluent-emoji-high-contrast-martial-arts-uniform" class="w-4 h-4" /> Karate
+                   <UIcon name="i-fluent-emoji-martial-arts-uniform" class="w-4 h-4" /> Karate
                  </span>
                </UTooltip>
-               <UTooltip text="Knowledge sponge 📚">
+               <UTooltip text="Knowledge sponge">
                  <span class="px-3 py-1 bg-gray-100 border border-black rounded font-bold text-sm cursor-default flex items-center gap-1">
-                   <UIcon name="i-heroicons-book-open-solid" class="w-4 h-4" /> Reading
+                   <UIcon name="i-fluent-emoji-open-book" class="w-4 h-4" /> Reading
                  </span>
                </UTooltip>
-               <UTooltip text="I use Linux Mint btw 🐧">
+               <UTooltip text="I use Linux Mint btw">
                  <span class="px-3 py-1 bg-gray-100 border border-black rounded font-bold text-sm cursor-default flex items-center gap-1">
                    <UIcon name="i-logos-linux-tux" class="w-4 h-4" /> Linux
                  </span>
