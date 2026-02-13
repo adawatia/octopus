@@ -2,12 +2,16 @@
 const toast = useToast()
 
 const handleNotify = () => {
-  toast.add({
-    title: 'Newsletter',
-    description: "You're on the list! Stay tuned for updates.",
-    icon: 'i-heroicons-check-circle-solid',
-    color: 'success'
-  })
+  try {
+    toast.add({
+      title: 'Newsletter',
+      description: "You're on the list! Stay tuned for updates.",
+      icon: 'i-heroicons-check-circle-solid',
+      color: 'success'
+    })
+  } catch (error) {
+    console.error('Failed to show notification:', error)
+  }
 }
 </script>
 
@@ -69,6 +73,7 @@ const handleNotify = () => {
                 class="rounded-xl border-3 border-black bg-white text-black font-bold text-lg px-8 py-3 shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all"
                 to="https://github.com/adawatia"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 GITHUB <UIcon name="i-logos-github-icon" class="w-5 h-5 ml-2" />
               </UButton>
@@ -88,11 +93,11 @@ const handleNotify = () => {
             <p class="text-lg leading-loose font-medium text-gray-800 mb-6">
               I am a <span class="font-bold text-pop-purple">Backend Developer</span> specializing in scalable API architecture and cloud infrastructure. Check out my work on 
               <UTooltip text="Check my code">
-                <a href="https://github.com/adawatia" class="underline decoration-pop-cyan decoration-4" target="_blank">GitHub</a>
+                <a href="https://github.com/adawatia" class="underline decoration-pop-cyan decoration-4" target="_blank" rel="noopener noreferrer">GitHub</a>
               </UTooltip>
                or connect with me on 
               <UTooltip text="Let's connect!">
-                <a href="https://linkedin.com/in/adawatia" class="underline decoration-pop-pink decoration-4" target="_blank">LinkedIn</a>
+                <a href="https://linkedin.com/in/adawatia" class="underline decoration-pop-pink decoration-4" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               </UTooltip>.
             </p>
             <p class="text-lg leading-loose font-medium text-gray-800 mb-6">

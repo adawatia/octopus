@@ -7,10 +7,11 @@
     <div class="mb-4">
       <h3 class="text-xl font-black cartoon-title mb-1">{{ role }}</h3>
       <div class="text-pop-purple font-bold font-mono text-sm flex items-center gap-1">
-        <UTooltip text="Visit Company HQ" v-if="link">
+        <UTooltip text="Visit Company HQ" v-if="isValidLink">
           <a 
             :href="link" 
-            target="_blank" 
+            target="_blank"
+            rel="noopener noreferrer"
             class="hover:underline decoration-2 decoration-pop-purple underline-offset-2 flex items-center gap-1"
           >
             @ {{ company }}
@@ -44,7 +45,9 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
+import { computed } from 'vue'
+
+const props = defineProps<{
   role: string
   company: string
   period: string
@@ -53,4 +56,15 @@ defineProps<{
   tags: string[]
   link?: string
 }>()
+
+const isValidLink = computed(() => {
+  if (!props.link) return false
+  
+  try {
+    const url = new URL(props.link, window.location.origin)
+    return url.protocol === 'http:' || url.protocol === 'https:'
+  } catch {
+    return false
+  }
+})
 </script>

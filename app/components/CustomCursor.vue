@@ -14,28 +14,39 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
-const x = ref(-100)
-const y = ref(-100)
+// Initialize cursor to center of screen
+const x = ref(typeof window !== 'undefined' ? window.innerWidth / 2 : 0)
+const y = ref(typeof window !== 'undefined' ? window.innerHeight / 2 : 0)
 const isHovering = ref(false)
 
 const updatePosition = (e) => {
+  if (!e) return
+  
   x.value = e.clientX
   y.value = e.clientY
   
-  // Check if hovering over clickable elements
+  // Check if hovering over clickable elements with proper null checks
   const target = e.target
-  if (target && (target.tagName === 'A' || target.tagName === 'BUTTON' || target.closest('a') || target.closest('button'))) {
-    isHovering.value = true
+  if (target) {
+    const isClickable = target.tagName === 'A' || 
+                       target.tagName === 'BUTTON' || 
+                       target.closest?.('a') || 
+                       target.closest?.('button')
+    isHovering.value = Boolean(isClickable)
   } else {
     isHovering.value = false
   }
 }
 
+let mounted = false
+
 onMounted(() => {
+  mounted = true
   window.addEventListener('mousemove', updatePosition)
 })
 
 onUnmounted(() => {
+  mounted = false
   window.removeEventListener('mousemove', updatePosition)
 })
 </script>

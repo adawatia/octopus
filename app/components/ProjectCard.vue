@@ -1,10 +1,11 @@
 <template>
   <component
-    :is="link && link !== '#' ? 'a' : 'div'"
-    :href="link && link !== '#' ? link : undefined"
-    :target="link && link !== '#' ? '_blank' : undefined"
+    :is="isValidLink ? 'a' : 'div'"
+    :href="isValidLink ? link : undefined"
+    :target="isValidLink ? '_blank' : undefined"
+    :rel="isValidLink ? 'noopener noreferrer' : undefined"
     class="cartoon-box p-6 h-full flex flex-col justify-between group hover:bg-pop-pink/10 transition-colors duration-300 relative overflow-hidden"
-    :class="{ 'cursor-pointer': link && link !== '#' }"
+    :class="{ 'cursor-pointer': isValidLink }"
   >
     <div v-if="wip" class="absolute top-0 left-0 bg-pop-yellow border-b-2 border-r-2 border-black px-3 py-1 z-10 shadow-[2px_2px_0px_0px_#000]">
       <span class="font-black text-xs uppercase tracking-wider flex items-center gap-1">
@@ -38,13 +39,26 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
+import { computed } from 'vue'
+
+const props = defineProps<{
   title: string
   description: string
   tags: string[]
   link?: string
   wip?: boolean
 }>()
+
+const isValidLink = computed(() => {
+  if (!props.link || props.link === '#') return false
+  
+  try {
+    const url = new URL(props.link, window.location.origin)
+    return url.protocol === 'http:' || url.protocol === 'https:'
+  } catch {
+    return false
+  }
+})
 
 const tagColors = [
     'bg-pop-yellow',
