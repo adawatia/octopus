@@ -9,36 +9,35 @@
     
     <main class="container mx-auto px-6 py-8 relative z-10 max-w-6xl">
       <!-- Navbar -->
-      <nav class="flex justify-between items-center mb-24 cartoon-box p-4 bg-white sticky top-4 z-50">
-        <h1 class="text-2xl font-black cartoon-title bg-pop-yellow border-2 border-black shadow-[2px_2px_0px_0px_#000] px-3 py-1 -rotate-2">
+      <nav class="flex justify-between items-center mb-20 cartoon-box p-4 bg-white sticky top-4 z-50">
+        <h1 class="text-xl md:text-2xl font-black cartoon-title bg-pop-yellow border-2 border-black shadow-[2px_2px_0px_0px_#000] px-3 py-1 -rotate-2">
             DEV_FOLIO
         </h1>
-        <div class="flex gap-6 font-bold text-sm md:text-base">
-          <a href="#work" class="hover:text-pop-purple hover:underline decoration-4 underline-offset-4 decoration-pop-yellow transition-all">WORK</a>
+        <div class="hidden md:flex gap-6 font-bold text-sm">
           <a href="#about" class="hover:text-pop-purple hover:underline decoration-4 underline-offset-4 decoration-pop-cyan transition-all">ABOUT</a>
-          <a href="#contact" class="hover:text-pop-purple hover:underline decoration-4 underline-offset-4 decoration-pop-pink transition-all">SAY HI!</a>
+          <a href="#experience" class="hover:text-pop-purple hover:underline decoration-4 underline-offset-4 decoration-pop-pink transition-all">QUESTS</a>
+          <a href="#work" class="hover:text-pop-purple hover:underline decoration-4 underline-offset-4 decoration-pop-yellow transition-all">PROJECTS</a>
+          <a href="#blog" class="hover:text-pop-purple hover:underline decoration-4 underline-offset-4 decoration-pop-orange transition-all">BLOG</a>
         </div>
       </nav>
 
       <!-- Hero Section -->
-      <header class="min-h-[50vh] flex flex-col justify-center items-center text-center mb-32 relative">
-     
-        <!-- Decorative Shapes -->
-        <div class="absolute top-0 right-10 w-16 h-16 bg-pop-cyan rounded-full border-3 border-black shadow-[4px_4px_0px_0px_#000] animate-bounce delay-100 hidden md:block"></div>
-        <div class="absolute bottom-10 left-10 w-12 h-12 bg-pop-pink transform rotate-45 border-3 border-black shadow-[4px_4px_0px_0px_#000] animate-pulse hidden md:block"></div>
+      <header class="min-h-[60vh] flex flex-col justify-center items-center text-center mb-32 relative">
+        <div class="absolute top-10 left-10 w-16 h-16 bg-pop-purple rounded-full border-3 border-black shadow-[4px_4px_0px_0px_#000] animate-bounce delay-75 hidden lg:block opacity-20"></div>
+        <div class="absolute bottom-20 right-20 w-12 h-12 bg-pop-orange rotate-12 border-3 border-black shadow-[4px_4px_0px_0px_#000] animate-pulse hidden lg:block opacity-20"></div>
 
-        <div class="inline-block px-4 py-2 bg-pop-orange border-3 border-black shadow-[4px_4px_0px_0px_#000] text-white rounded-full mb-8 font-bold transform -rotate-3 hover:rotate-0 transition-transform cursor-default animate-enter">
-          👋 HELLO WORLD!
+        <div class="inline-block px-4 py-2 bg-pop-orange border-3 border-black shadow-[4px_4px_0px_0px_#000] text-white rounded-full mb-8 font-bold transform -rotate-3 hover:rotate-0 transition-transform cursor-default animate-enter text-sm md:text-base">
+          👋 HELLO WORLD! I'M A CREATIVE DEVELOPER
         </div>
         
-        <h2 class="text-6xl md:text-9xl font-black mb-8 leading-none cartoon-title animate-enter delay-100">
-          CREATIVE<br>
-          <span class="marker-highlight text-candy-text relative inline-block transform hover:-rotate-1 transition-transform">DEVELOPER</span>
+        <h2 class="text-5xl md:text-8xl font-black mb-6 leading-none cartoon-title animate-enter delay-100">
+          BUILDING<br>
+          <span class="marker-highlight text-candy-text relative inline-block transform hover:-rotate-1 transition-transform">IMPACTFUL</span><br>
+          SOLUTIONS
         </h2>
         
-        <p class="text-xl md:text-2xl max-w-2xl text-gray-700 mb-10 font-medium animate-enter delay-200">
-          I build <span class="font-bold text-pop-purple">playful</span> web experiences. 
-          Turning caffeine into code since 2020.
+        <p class="text-lg md:text-2xl max-w-2xl text-gray-700 mb-10 font-medium animate-enter delay-200">
+          From <span class="font-bold text-pop-purple">Chirawa</span> to the Cloud. Exploring software, gaming, and open source.
         </p>
         
         <div class="flex gap-4 animate-enter delay-300">
@@ -46,10 +45,11 @@
             size="xl"
             class="rounded-xl border-3 border-black bg-pop-yellow text-black font-black text-lg px-8 py-3 shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all transform hover:rotate-1"
           >
-            SEE MY WORK 👇
+            VIEW MY QUESTS 👇
           </UButton>
            <UButton 
             size="xl"
+            variant="ghost"
             class="rounded-xl border-3 border-black bg-white text-black font-bold text-lg px-8 py-3 shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all"
           >
             GITHUB 👾
@@ -57,41 +57,207 @@
         </div>
       </header>
 
-      <!-- Project Grid -->
+      <!-- About Me Sections -->
+      <section id="about" class="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div class="cartoon-box p-8 bg-white rotate-1">
+          <h3 class="text-3xl font-black cartoon-title mb-6 flex items-center gap-3">
+            <span class="text-4xl">🧑‍💻</span> ABOUT ME
+          </h3>
+          <p class="text-lg leading-loose font-medium text-gray-800 mb-6">
+            Born in <span class="bg-pop-pink/20 px-1 rounded">Chirawa, Rajasthan</span> and now based in Ludhiana. I developed a passion for technology through gaming, which led me to explore software development and open-source systems.
+          </p>
+          <p class="text-lg leading-loose font-medium text-gray-800 mb-6">
+            With a problem-solving mindset, I navigate the world of Linux and technology, always eager to learn and innovate. Beyond tech, I practice <span class="font-bold text-pop-orange">Karate</span>, enjoy reading books, and love sharing science knowledge.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4">
+             <span class="px-3 py-1 bg-gray-100 border border-black rounded font-bold text-sm">🥋 Karate</span>
+             <span class="px-3 py-1 bg-gray-100 border border-black rounded font-bold text-sm">📚 Reading</span>
+             <span class="px-3 py-1 bg-gray-100 border border-black rounded font-bold text-sm">🎮 Gaming</span>
+             <span class="px-3 py-1 bg-gray-100 border border-black rounded font-bold text-sm">🐧 Linux</span>
+          </div>
+        </div>
+
+        <div>
+          <!-- Tech Stack -->
+          <div class="mb-12">
+            <h3 class="text-3xl font-black cartoon-title mb-6 transform -rotate-1">🛠️ INVENTORY</h3>
+            <div class="flex flex-wrap gap-3">
+              <TechPill name="Python" icon="🐍" class="bg-blue-50" />
+              <TechPill name="C++" icon="⚙️" class="bg-blue-50" />
+              <TechPill name="Rust" icon="🦀" class="bg-orange-50" />
+              <TechPill name="React" icon="⚛️" class="bg-cyan-50" />
+              <TechPill name="Vue/Nuxt" icon="💚" class="bg-green-50" />
+              <TechPill name="Tailwind" icon="🎨" class="bg-cyan-50" />
+              <TechPill name="Docker" icon="🐳" class="bg-blue-50" />
+              <TechPill name="AWS" icon="☁️" class="bg-yellow-50" />
+              <TechPill name="GCP" icon="🌩️" class="bg-red-50" />
+              <TechPill name="PyTorch" icon="🔥" class="bg-orange-50" />
+              <TechPill name="SQLite" icon="🗃️" class="bg-blue-50" />
+              <TechPill name="Linux" icon="🐧" class="bg-gray-50" />
+            </div>
+          </div>
+          
+          <!-- Education -->
+           <div class="cartoon-box p-6 bg-pop-cyan/10 border-dashed">
+             <h3 class="text-2xl font-black cartoon-title mb-4">🎓 EDUCATION</h3>
+             <div class="space-y-6">
+                <div>
+                  <div class="flex justify-between items-start">
+                    <h4 class="font-bold text-lg">B.E. Computer Science</h4>
+                    <span class="text-sm font-bold bg-white border border-black px-2 rounded">2021-2025</span>
+                  </div>
+                  <div class="text-gray-600 font-medium">Chandigarh University</div>
+                  <div class="text-sm font-bold text-pop-purple mt-1">CGPA: 7.76</div>
+                </div>
+                <div class="border-t border-black/10 pt-4">
+                   <h4 class="font-bold text-sm mb-2 text-gray-500 uppercase tracking-wider">Relevant Loot (Coursework)</h4>
+                   <div class="flex flex-wrap gap-2">
+                     <span class="text-xs bg-white px-2 py-1 rounded border border-black/20">Algorithms</span>
+                     <span class="text-xs bg-white px-2 py-1 rounded border border-black/20">Data Structures</span>
+                     <span class="text-xs bg-white px-2 py-1 rounded border border-black/20">Machine Learning</span>
+                     <span class="text-xs bg-white px-2 py-1 rounded border border-black/20">Computer Vision</span>
+                   </div>
+                </div>
+             </div>
+           </div>
+        </div>
+      </section>
+
+      <!-- Experience Log -->
+      <section id="experience" class="mb-32">
+         <h3 class="text-4xl md:text-5xl font-black mb-12 cartoon-title flex items-center gap-4">
+            <span class="w-12 h-12 bg-pop-purple rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white text-2xl">⚡</span>
+            QUEST LOG
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+           <ExperienceCard 
+             role="Research Intern"
+             company="IIT Guwahati"
+             period="May - July 2023"
+             description="Accelerated Deep Neural Network inference on NoC architectures using Timeloop, C++ and Python."
+             :achievements="[
+               '23% latency reduction via optimized data mapping',
+               'Built NoC simulation models for workload testing'
+             ]"
+             :tags="['C++', 'Python', 'Timeloop', 'Research']"
+           />
+           <ExperienceCard 
+             role="Mentee (ML Engineering)"
+             company="Growth Purple"
+             period="June - Oct 2023"
+             description="Developed a PDF chatbot using LLMs, Streamlit, and LangChain for real-time document interaction."
+             :achievements="[
+               '90% accuracy on complex PDF formats',
+               'Integrated RAG for better context retrieval',
+               'Reduced support tickets by 35%'
+             ]"
+             :tags="['Python', 'LangChain', 'LLMs', 'Streamlit']"
+           />
+        </div>
+      </section>
+
+      <!-- Projects -->
       <section id="work" class="mb-32">
-        <h3 class="text-4xl md:text-5xl font-black mb-16 cartoon-title flex items-center gap-4">
-            <span class="w-12 h-12 bg-pop-cyan rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000]"></span>
-            FUN PROJECTS
+        <h3 class="text-4xl md:text-5xl font-black mb-12 cartoon-title flex items-center gap-4">
+            <span class="w-12 h-12 bg-pop-cyan rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white text-2xl">🚀</span>
+            SIDE MISSIONS
         </h3>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             <ProjectCard 
-                title="SNEAKER_DROP"
-                description="Hypebeast marketplace with real-time auctions. Built for speed and style."
-                :tags="['NUXT', 'SUPABASE', 'PINIA']"
-                class="transform md:rotate-1 hover:rotate-0"
+                title="Vega Aries Parking"
+                description="Efficient Parking & Toll Management: A RFID-Enabled Approach with Vega Aries Development Board."
+                :tags="['IoT', 'C++', 'Hardware']"
+                class="transform hover:rotate-1"
             />
             <ProjectCard 
-                title="DOODLE_DASH"
-                description="Multiplayer drawing game played by 10k+ daily users. Uses WebSockets."
-                :tags="['VUE 3', 'SOCKET.IO', 'CANVAS']"
-                class="transform md:-rotate-1 hover:rotate-0"
+                title="RAG PDF Chatbot"
+                description="Chat with your documents using LangChain and Streamlit. Features semantic search and context retention."
+                :tags="['Python', 'LangChain', 'Streamlit']"
+                class="transform hover:-rotate-1"
             />
             <ProjectCard 
-                title="RETRO_TUNES"
-                description="Spotify integration with a 90s winamp aesthetic interface."
-                :tags="['API', 'AUDIO', 'DESIGN']"
-                class="transform md:rotate-1 hover:rotate-0"
+                title="NoC Simulator"
+                description="Custom simulation models for Network-on-Chip architectures to test AI workload efficiency."
+                :tags="['C++', 'Python', 'Modeling']"
+                class="transform hover:rotate-1"
             />
             <ProjectCard 
-                title="PIXEL_UI"
-                description="Open source component library for 8-bit lovers."
-                :tags="['NPM', 'TYPESCRIPT', 'DOCS']"
-                class="transform md:-rotate-1 hover:rotate-0"
+                title="Telemedicine Platform"
+                description="Cloud-Based Telemedicine Platform enhancing healthcare accessibility through technology."
+                :tags="['Cloud', 'Web', 'Healthcare']"
+                class="transform hover:-rotate-1"
             />
         </div>
       </section>
 
+      <!-- Publications & Certs -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-32">
+        <section class="lg:col-span-2">
+           <h3 class="text-3xl font-black cartoon-title mb-8 flex items-center gap-3">
+            <span class="text-3xl">📝</span> PUBLICATIONS
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <PublicationCard 
+              title="A Cloud-Based Telemedicine Platform: Enhancing Healthcare Accessibility"
+              venue="IEEE International Conference on Progressive Innovations"
+              type="Conference"
+              date="Dec 2024"
+              link="#"
+            />
+             <PublicationCard 
+              title="Efficient Parking & Toll Management: A RFID-Enabled Approach"
+              venue="International Journal of Innovative Science"
+              type="Journal"
+              date="Nov 2023"
+              link="#"
+            />
+          </div>
+        </section>
+
+        <section>
+           <h3 class="text-3xl font-black cartoon-title mb-8 flex items-center gap-3">
+            <span class="text-3xl">🏆</span> CERTIFICATIONS
+          </h3>
+          <div class="cartoon-box p-6 bg-pop-yellow/10">
+            <ul class="space-y-4">
+              <li class="flex items-center gap-3 font-bold text-sm">
+                <span class="text-xl">🔐</span> Google IT Automation (Python)
+              </li>
+              <li class="flex items-center gap-3 font-bold text-sm">
+                <span class="text-xl">☁️</span> AWS Academy Cloud Architecting
+              </li>
+              <li class="flex items-center gap-3 font-bold text-sm">
+                <span class="text-xl">🤖</span> Summer School on AI (Russia)
+              </li>
+              <li class="flex items-center gap-3 font-bold text-sm">
+                <span class="text-xl">📡</span> NPTEL IoT (Gold)
+              </li>
+              <li class="flex items-center gap-3 font-bold text-sm">
+                <span class="text-xl">🐧</span> NDG Linux Unhatched
+              </li>
+            </ul>
+             <div class="mt-6 pt-4 border-t-2 border-black/10 text-center">
+              <a href="#" class="text-xs font-black uppercase hover:text-pop-purple">View All Credentials ↗</a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+       <!-- Blog -->
+       <section id="blog" class="mb-32">
+          <h3 class="text-4xl font-black cartoon-title mb-10 flex items-center gap-4">
+             <span class="w-12 h-12 bg-pop-pink rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white text-2xl">✍️</span>
+            LATEST LOGS
+          </h3>
+          <div class="cartoon-box p-12 text-center bg-gray-50 border-dashed">
+             <div class="text-6xl mb-4">🚧</div>
+             <h4 class="text-2xl font-black mb-2">WRITING IN PROGRESS</h4>
+             <p class="text-gray-600 mb-6">Compiling thoughts on Linux, Architecture, and Gaming benchmarks.</p>
+             <UButton class="border-2 border-black">Notify Me</UButton>
+          </div>
+       </section>
+      
        <footer id="contact" class="border-t-3 border-black pt-16 pb-24 text-center bg-pop-pink/10 -mx-6 px-6 mt-20">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-5xl font-black cartoon-title mb-8">WANNA COLLAB?</h2>
@@ -100,8 +266,8 @@
                     hello@example.com
                 </a>
                 
-                 <div class="mt-16 flex justify-center gap-8 opacity-70">
-                    <span>© 2026 Dev Folio</span>
+                 <div class="mt-16 flex justify-center gap-8 opacity-70 font-mono text-sm">
+                    <span>© 2026 Adawatia</span>
                     <span>Built with Nuxt 4 & Fun</span>
                 </div>
             </div>
