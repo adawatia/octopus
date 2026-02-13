@@ -17,21 +17,21 @@ const handleNotify = () => {
 
 <template>
   <UApp>
-    <div class="min-h-screen relative font-sans text-candy-text selection:bg-pop-pink selection:text-white cursor-none">
-      <CustomCursor />
+    <div class="min-h-screen relative font-sans text-candy-text selection:bg-pop-pink selection:text-white md:cursor-none">
+      <CustomCursor class="hidden md:block" />
       <Marquee />
       <!-- Dotted Background -->
       <div class="fixed inset-0 z-[-1] bg-candy-bg">
           <div class="absolute inset-0 bg-dots pointer-events-none"></div>
       </div>
       
-      <main class="container mx-auto px-6 py-8 relative z-10 max-w-6xl">
-        <!-- Navbar -->
-        <nav class="flex justify-between items-center mb-20 cartoon-box p-4 bg-white sticky top-4 z-50">
+      <main class="container mx-auto px-4 md:px-6 py-4 md:py-8 relative z-10 max-w-6xl pb-24 md:pb-8">
+        <!-- Desktop Navbar -->
+        <nav class="hidden md:flex justify-between items-center mb-20 cartoon-box p-4 bg-white sticky top-4 z-50">
           <h1 class="text-xl md:text-2xl font-black cartoon-title bg-pop-yellow border-2 border-black shadow-[2px_2px_0px_0px_#000] px-3 py-1 -rotate-2">
               DEV_FOLIO
           </h1>
-          <div class="hidden md:flex gap-6 font-bold text-sm">
+          <div class="flex gap-6 font-bold text-sm">
             <a href="#about" class="hover:text-pop-purple hover:underline decoration-4 underline-offset-4 decoration-pop-cyan transition-all">ABOUT</a>
             <a href="#experience" class="hover:text-pop-purple hover:underline decoration-4 underline-offset-4 decoration-pop-pink transition-all">QUESTS</a>
             <a href="#work" class="hover:text-pop-purple hover:underline decoration-4 underline-offset-4 decoration-pop-yellow transition-all">PROJECTS</a>
@@ -39,52 +39,80 @@ const handleNotify = () => {
           </div>
         </nav>
 
+        <!-- Mobile Floating Bottom Navbar -->
+        <nav class="md:hidden fixed bottom-4 left-4 right-4 z-50 cartoon-box bg-white p-2.5 flex justify-around items-center gap-1">
+          <a href="#about" class="flex flex-col items-center gap-0.5 text-[10px] font-bold hover:text-pop-cyan transition-colors active:scale-95 flex-1">
+            <UIcon name="i-heroicons-user-circle-solid" class="w-5 h-5" />
+            <span>ABOUT</span>
+          </a>
+          <a href="#experience" class="flex flex-col items-center gap-0.5 text-[10px] font-bold hover:text-pop-pink transition-colors active:scale-95 flex-1">
+            <UIcon name="i-heroicons-bolt-solid" class="w-5 h-5" />
+            <span>QUESTS</span>
+          </a>
+          
+          <!-- DEV_FOLIO Logo in Center -->
+          <div class="flex flex-col items-center justify-center px-2 flex-1">
+            <div class="text-xs font-black cartoon-title bg-pop-yellow border-2 border-black shadow-[2px_2px_0px_0px_#000] px-2 py-0.5 -rotate-2 whitespace-nowrap">
+              DEV_FOLIO
+            </div>
+          </div>
+          
+          <a href="#work" class="flex flex-col items-center gap-0.5 text-[10px] font-bold hover:text-pop-yellow transition-colors active:scale-95 flex-1">
+            <UIcon name="i-heroicons-rocket-launch-solid" class="w-5 h-5" />
+            <span>PROJECTS</span>
+          </a>
+          <a href="#blog" class="flex flex-col items-center gap-0.5 text-[10px] font-bold hover:text-pop-orange transition-colors active:scale-95 flex-1">
+            <UIcon name="i-heroicons-pencil-square-solid" class="w-5 h-5" />
+            <span>BLOG</span>
+          </a>
+        </nav>
+
         <!-- Hero Section -->
-        <header class="min-h-[60vh] flex flex-col justify-center items-center text-center mb-32 relative">
+        <header class="min-h-[50vh] md:min-h-[60vh] flex flex-col justify-center items-center text-center mb-16 md:mb-32 relative px-2 mt-12 md:mt-0">
           <div class="absolute top-10 left-10 w-16 h-16 bg-pop-purple rounded-full border-3 border-black shadow-[4px_4px_0px_0px_#000] animate-bounce delay-75 hidden lg:block opacity-20"></div>
           <div class="absolute bottom-20 right-20 w-12 h-12 bg-pop-orange rotate-12 border-3 border-black shadow-[4px_4px_0px_0px_#000] animate-pulse hidden lg:block opacity-20"></div>
 
-          <div class="inline-flex items-center gap-2 px-4 py-2 bg-pop-orange border-3 border-black shadow-[4px_4px_0px_0px_#000] text-white rounded-full mb-8 font-bold transform -rotate-3 hover:rotate-0 transition-transform cursor-default animate-enter text-sm md:text-base">
-            <UIcon name="i-heroicons-hand-raised-solid" class="w-5 h-5 text-yellow-300" /> HELLO WORLD! I'M DEVANSH SHARMA
+          <div class="inline-flex items-center gap-2 px-3 md:px-4 py-2 bg-pop-orange border-3 border-black shadow-[4px_4px_0px_0px_#000] text-white rounded-full mb-6 md:mb-8 font-bold transform -rotate-3 hover:rotate-0 transition-transform cursor-default animate-enter text-xs md:text-base">
+            <UIcon name="i-heroicons-hand-raised-solid" class="w-4 h-4 md:w-5 md:h-5 text-yellow-300" /> HELLO WORLD! I'M DEVANSH SHARMA
           </div>
           
-          <h2 class="text-5xl md:text-8xl font-black mb-6 leading-none cartoon-title animate-enter delay-100">
+          <h2 class="text-4xl md:text-8xl font-black mb-4 md:mb-6 leading-tight md:leading-none cartoon-title animate-enter delay-100">
             AI BACKEND<br>
             <span class="marker-highlight text-candy-text relative inline-block transform hover:-rotate-1 transition-transform">ENGINEER</span><br>
             & ARCHITECT
           </h2>
           
-          <p class="text-lg md:text-2xl max-w-2xl text-gray-700 mb-10 font-medium animate-enter delay-200">
+          <p class="text-base md:text-2xl max-w-2xl text-gray-700 mb-6 md:mb-10 font-medium animate-enter delay-200 px-4">
             Specializing in scalable API architecture, cloud infrastructure, and production-grade AI pipelines.
           </p>
           
-          <div class="flex gap-4 animate-enter delay-300">
+          <div class="flex flex-col md:flex-row gap-3 md:gap-4 animate-enter delay-300 w-full md:w-auto px-4">
             <UButton 
               size="xl"
-              class="rounded-xl border-3 border-black bg-pop-yellow text-black font-black text-lg px-8 py-3 shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all transform hover:rotate-1"
+              class="rounded-xl border-3 border-black bg-pop-yellow text-black font-black text-base md:text-lg px-6 md:px-8 py-3 shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all transform hover:rotate-1 w-full md:w-auto justify-center"
               to="#experience"
             >
-              VIEW MY QUESTS <UIcon name="i-heroicons-arrow-down-circle-solid" class="w-6 h-6 ml-2" />
+              VIEW MY QUESTS <UIcon name="i-heroicons-arrow-down-circle-solid" class="w-5 h-5 md:w-6 md:h-6 ml-2" />
             </UButton>
              <UTooltip text="Check my Repos">
                <UButton 
                 size="xl"
                 variant="ghost"
-                class="rounded-xl border-3 border-black bg-white text-black font-bold text-lg px-8 py-3 shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all"
+                class="rounded-xl border-3 border-black bg-white text-black font-bold text-base md:text-lg px-6 md:px-8 py-3 shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all w-full md:w-auto justify-center"
                 to="https://github.com/adawatia"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                GITHUB <UIcon name="i-logos-github-icon" class="w-5 h-5 ml-2" />
+                GITHUB <UIcon name="i-logos-github-icon" class="w-4 h-4 md:w-5 md:h-5 ml-2" />
               </UButton>
             </UTooltip>
           </div>
         </header>
 
         <!-- About Me Sections -->
-        <section id="about" class="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <div class="cartoon-box p-8 bg-white rotate-1">
-            <h3 class="text-3xl font-black cartoon-title mb-6 flex items-center gap-4">
+        <section id="about" class="mb-16 md:mb-32 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
+          <div class="cartoon-box p-6 md:p-8 bg-white rotate-1">
+            <h3 class="text-2xl md:text-3xl font-black cartoon-title mb-4 md:mb-6 flex items-center gap-3 md:gap-4">
               <div class="w-12 h-12 bg-pop-purple rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white">
                 <UIcon name="i-heroicons-user-circle-solid" class="w-6 h-6" />
               </div>
@@ -124,8 +152,8 @@ const handleNotify = () => {
 
           <div>
             <!-- Tech Stack -->
-            <div class="mb-12">
-              <h3 class="text-3xl font-black cartoon-title mb-6 transform -rotate-1 flex items-center gap-4">
+            <div class="mb-8 md:mb-12">
+              <h3 class="text-2xl md:text-3xl font-black cartoon-title mb-4 md:mb-6 transform -rotate-1 flex items-center gap-3 md:gap-4">
                 <div class="w-12 h-12 bg-pop-orange rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white">
                   <UIcon name="i-heroicons-wrench-screwdriver-solid" class="w-6 h-6" />
                 </div>
@@ -189,8 +217,8 @@ const handleNotify = () => {
         </section>
 
         <!-- Experience Log -->
-        <section id="experience" class="mb-32">
-           <h3 class="text-4xl md:text-5xl font-black mb-12 cartoon-title flex items-center gap-4">
+        <section id="experience" class="mb-16 md:mb-32">
+           <h3 class="text-3xl md:text-5xl font-black mb-8 md:mb-12 cartoon-title flex items-center gap-3 md:gap-4">
               <div class="w-12 h-12 bg-pop-purple rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white">
                 <UIcon name="i-heroicons-bolt-solid" class="w-6 h-6" />
               </div>
@@ -240,8 +268,8 @@ const handleNotify = () => {
         </section>
 
         <!-- Projects -->
-        <section id="work" class="mb-32">
-          <h3 class="text-4xl md:text-5xl font-black mb-12 cartoon-title flex items-center gap-4">
+        <section id="work" class="mb-16 md:mb-32">
+          <h3 class="text-3xl md:text-5xl font-black mb-8 md:mb-12 cartoon-title flex items-center gap-3 md:gap-4">
               <div class="w-12 h-12 bg-pop-cyan rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white">
                 <UIcon name="i-heroicons-rocket-launch-solid" class="w-6 h-6" />
               </div>
@@ -282,9 +310,9 @@ const handleNotify = () => {
         </section>
 
         <!-- Publications & Certs -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-32">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 mb-16 md:mb-32">
           <section class="lg:col-span-2">
-             <h3 class="text-3xl font-black cartoon-title mb-8 flex items-center gap-4">
+             <h3 class="text-2xl md:text-3xl font-black cartoon-title mb-6 md:mb-8 flex items-center gap-3 md:gap-4">
               <div class="w-12 h-12 bg-pop-cyan rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white">
                 <UIcon name="i-heroicons-document-text-solid" class="w-6 h-6" />
               </div>
@@ -310,7 +338,7 @@ const handleNotify = () => {
           </section>
 
           <section>
-             <h3 class="text-3xl font-black cartoon-title mb-8 flex items-center gap-4">
+             <h3 class="text-2xl md:text-3xl font-black cartoon-title mb-6 md:mb-8 flex items-center gap-3 md:gap-4">
               <div class="w-12 h-12 bg-pop-yellow rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white">
                 <UIcon name="i-heroicons-trophy-solid" class="w-6 h-6" />
               </div>
@@ -352,8 +380,8 @@ const handleNotify = () => {
         </div>
 
          <!-- Blog -->
-         <section id="blog" class="mb-32">
-            <h3 class="text-4xl font-black cartoon-title mb-10 flex items-center gap-4">
+         <section id="blog" class="mb-16 md:mb-32">
+            <h3 class="text-3xl md:text-4xl font-black cartoon-title mb-6 md:mb-10 flex items-center gap-3 md:gap-4">
                <div class="w-12 h-12 bg-pop-pink rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white">
                   <UIcon name="i-heroicons-pencil-square-solid" class="w-6 h-6" />
                 </div>
@@ -366,19 +394,19 @@ const handleNotify = () => {
                <UButton class="border-2 border-black" @click="handleNotify">Notify Me</UButton>
             </div>
          </section>
-        
-         <footer id="contact" class="border-t-3 border-black pt-16 pb-24 text-center bg-pop-pink/10 -mx-6 px-6 mt-20">
+         
+         <footer id="contact" class="border-t-3 border-black pt-12 md:pt-16 pb-24 md:pb-24 text-center bg-pop-pink/10 -mx-4 md:-mx-6 px-4 md:px-6 mt-12 md:mt-20">
               <div class="max-w-4xl mx-auto">
-                  <h2 class="text-5xl font-black cartoon-title mb-8">WANNA COLLAB?</h2>
-                  <p class="mb-10 text-xl font-medium">Have a cool idea? Let's make it happen!</p>
-                  <a href="mailto:dv.adawatia@gmail.com" class="inline-block text-3xl font-black bg-white border-3 border-black shadow-[6px_6px_0px_0px_#000] px-8 py-4 hover:bg-pop-yellow hover:scale-105 transition-all transform rotate-2 hover:rotate-0 rounded-2xl text-[1.5rem] md:text-3xl">
+                  <h2 class="text-3xl md:text-5xl font-black cartoon-title mb-6 md:mb-8">WANNA COLLAB?</h2>
+                  <p class="mb-6 md:mb-10 text-lg md:text-xl font-medium px-4">Have a cool idea? Let's make it happen!</p>
+                  <a href="mailto:dv.adawatia@gmail.com" class="inline-block text-lg md:text-3xl font-black bg-white border-3 border-black shadow-[6px_6px_0px_0px_#000] px-4 md:px-8 py-3 md:py-4 hover:bg-pop-yellow hover:scale-105 transition-all transform rotate-2 hover:rotate-0 rounded-2xl break-all">
                       dv.adawatia@gmail.com
                   </a>
-                  <div class="mt-8 text-xl font-bold flex flex-col gap-2">
+                  <div class="mt-6 md:mt-8 text-base md:text-xl font-bold flex flex-col gap-2">
                       <span>+91-8437330408</span>
                   </div>
                   
-                   <div class="mt-16 flex justify-center gap-8 opacity-70 font-mono text-sm">
+                   <div class="mt-12 md:mt-16 flex flex-col md:flex-row justify-center gap-4 md:gap-8 opacity-70 font-mono text-xs md:text-sm">
                       <span>© 2026 Adawatia</span>
                       <span>Built with Nuxt 4 & Fun</span>
                   </div>

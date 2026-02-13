@@ -86,6 +86,41 @@ body {
   }
 }
 
+
 .rotate-hover:hover {
     transform: rotate(2deg) scale(1.02);
 }
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  /* Hide custom cursor on touch devices */
+  .cursor-none {
+    cursor: auto !important;
+  }
+  
+  /* Improve touch targets */
+  a, button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  /* Reduce animations on mobile for better performance */
+  .cartoon-box:hover {
+    transform: none;
+    box-shadow: var(--shadow-hard);
+  }
+  
+  /* Ensure smooth scrolling */
+  html {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Hide custom cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .cursor-none {
+    cursor: auto !important;
+  }
+}
+
