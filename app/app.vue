@@ -186,31 +186,32 @@ const handleNotify = () => {
                :tags="['FastAPI', 'Fargate', 'Lambda', 'Docker']"
                link="https://www.zryth.com/"
              />
-             <ExperienceCard 
-               role="ML Mentee (Trainee)"
-               company="GrowthPurple Technologies"
-               period="Jun 2023 – Apr 2025"
-               description="Developed real-time document interaction backend and RAG architectures."
-               :achievements="[
-                 'Developed document interaction backend using LangChain & LLMs',
-                 'Implemented RAG for context retrieval accuracy',
-                 'Streamlined model deployment pipelines'
-               ]"
-               :tags="['LangChain', 'LLMs', 'Streamlit', 'RAG']"
-               link="https://growthpurple.com/"
-             />
-             <ExperienceCard 
-               role="Research Intern"
-               company="IIT Guwahati"
-               period="May 2023 – July 2023"
-               description="Accelerated DNN inference on Network-on-Chip (NoC) architectures."
-               :achievements="[
-                 'Achieved 23% latency reduction via optimized data mapping',
-                 'Accelerated DNN inference using Timeloop, C++, and Python'
-               ]"
-               :tags="['C++', 'Python', 'Timeloop', 'NoC']"
-               link="https://iitg.ac.in/cseweb/marslab/"
-             />
+              <ExperienceCard 
+                role="Mentee (ML Engineering)"
+                company="GrowthPurple Technologies"
+                period="June 2023 – October 2023"
+                description="Engaged in a focused mentorship experience, actively participating in the development of a PDF chatbot using LLMs, Streamlit, and LangChain for real-time document interaction."
+                :achievements="[
+                  '90% accuracy on complex PDF formats',
+                  'Integrated RAG for better context retrieval',
+                  'Reduced support tickets by 35%'
+                ]"
+                :tags="['Python', 'Streamlit', 'LangChain', 'Hugging Face', 'LLMs']"
+                link="https://growthpurple.com/"
+              />
+              <ExperienceCard 
+                role="Research Intern"
+                company="IIT Guwahati"
+                period="May 2023 – July 2023"
+                description="Accelerated Deep Neural Network inference on NoC architectures using Timeloop, C++ and Python. Contributed to AI hardware-software co-design."
+                :achievements="[
+                  'Achieved 23% latency reduction via optimized data mapping',
+                  'Built NoC simulation models for workload testing',
+                  'Contributed to research on AI accelerator design'
+                ]"
+                :tags="['C++', 'Python', 'Timeloop', 'NoC Architecture']"
+                link="https://iitg.ac.in/cseweb/marslab/"
+              />
           </div>
         </section>
 
@@ -267,19 +268,20 @@ const handleNotify = () => {
             </h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <PublicationCard 
-                title="Telemedicine Platform"
-                venue="IEEE Xplore"
+                title="A Cloud-Based Telemedicine Platform: Enhancing Healthcare Accessibility through Technology"
+                venue="IEEE Computer Society (IEEE Xplore)"
                 type="Conference"
-                date="Dec 2024"
-                link="#"
+                date="December 2024"
+                link="https://ieeexplore.ieee.org/abstract/document/10974157"
               />
                <PublicationCard 
-                title="RFID Toll Management"
-                venue="IJISRT"
+                title="Efficient Parking & Toll Management: A RFID-Enabled Approach with Vega Aries Development Board"
+                venue="International Journal of Innovative Science and Research Technology"
                 type="Journal"
-                date="Nov 2023"
-                link="#"
+                date="November 2023"
+                link="https://zenodo.org/records/10251059"
               />
+
             </div>
           </section>
 
