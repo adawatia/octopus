@@ -6,7 +6,19 @@
     
     <div class="mb-4">
       <h3 class="text-xl font-black cartoon-title mb-1">{{ role }}</h3>
-      <div class="text-pop-purple font-bold font-mono text-sm">@ {{ company }}</div>
+      <div class="text-pop-purple font-bold font-mono text-sm flex items-center gap-1">
+        @ 
+        <a 
+          v-if="link" 
+          :href="link" 
+          target="_blank" 
+          class="hover:underline decoration-2 decoration-pop-purple underline-offset-2 flex items-center gap-1"
+        >
+          {{ company }}
+          <UIcon name="i-heroicons-arrow-top-right-on-square-20-solid" class="w-3 h-3" />
+        </a>
+        <span v-else>{{ company }}</span>
+      </div>
     </div>
 
     <p class="text-gray-700 text-sm mb-4 leading-relaxed font-medium">
@@ -39,5 +51,6 @@ defineProps<{
   description: string
   achievements?: string[]
   tags: string[]
+  link?: string
 }>()
 </script>

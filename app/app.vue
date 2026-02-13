@@ -184,6 +184,7 @@ const handleNotify = () => {
                  'Containerized applications using Docker'
                ]"
                :tags="['FastAPI', 'Fargate', 'Lambda', 'Docker']"
+               link="https://www.zryth.com/"
              />
              <ExperienceCard 
                role="ML Mentee (Trainee)"
@@ -196,6 +197,7 @@ const handleNotify = () => {
                  'Streamlined model deployment pipelines'
                ]"
                :tags="['LangChain', 'LLMs', 'Streamlit', 'RAG']"
+               link="https://growthpurple.com/"
              />
              <ExperienceCard 
                role="Research Intern"
@@ -207,6 +209,7 @@ const handleNotify = () => {
                  'Accelerated DNN inference using Timeloop, C++, and Python'
                ]"
                :tags="['C++', 'Python', 'Timeloop', 'NoC']"
+               link="https://iitg.ac.in/cseweb/marslab/"
              />
           </div>
         </section>
