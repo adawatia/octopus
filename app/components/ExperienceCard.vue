@@ -7,17 +7,17 @@
     <div class="mb-4">
       <h3 class="text-xl font-black cartoon-title mb-1">{{ role }}</h3>
       <div class="text-pop-purple font-bold font-mono text-sm flex items-center gap-1">
-        @ 
-        <a 
-          v-if="link" 
-          :href="link" 
-          target="_blank" 
-          class="hover:underline decoration-2 decoration-pop-purple underline-offset-2 flex items-center gap-1"
-        >
-          {{ company }}
-          <UIcon name="i-heroicons-arrow-top-right-on-square-20-solid" class="w-3 h-3" />
-        </a>
-        <span v-else>{{ company }}</span>
+        <UTooltip text="Visit Company HQ 🏢" v-if="link">
+          <a 
+            :href="link" 
+            target="_blank" 
+            class="hover:underline decoration-2 decoration-pop-purple underline-offset-2 flex items-center gap-1"
+          >
+            @ {{ company }}
+            <UIcon name="i-heroicons-arrow-top-right-on-square-20-solid" class="w-3 h-3" />
+          </a>
+        </UTooltip>
+        <span v-else>@ {{ company }}</span>
       </div>
     </div>
 

@@ -60,7 +60,7 @@ const handleNotify = () => {
               class="rounded-xl border-3 border-black bg-pop-yellow text-black font-black text-lg px-8 py-3 shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all transform hover:rotate-1"
               to="#experience"
             >
-              VIEW MY QUESTS 👇
+              VIEW MY QUESTS <UIcon name="i-heroicons-arrow-down-circle-solid" class="w-6 h-6 ml-2" />
             </UButton>
              <UTooltip text="Check my Repos">
                <UButton 
@@ -86,15 +86,34 @@ const handleNotify = () => {
               ABOUT ME
             </h3>
             <p class="text-lg leading-loose font-medium text-gray-800 mb-6">
-              I am a <span class="font-bold text-pop-purple">Backend Developer</span> specializing in scalable API architecture and cloud infrastructure. Check out my work on <a href="https://github.com/adawatia" class="underline decoration-pop-cyan decoration-4">GitHub</a> or connect with me on <a href="https://linkedin.com/in/adawatia" class="underline decoration-pop-pink decoration-4">LinkedIn</a>.
+              I am a <span class="font-bold text-pop-purple">Backend Developer</span> specializing in scalable API architecture and cloud infrastructure. Check out my work on 
+              <UTooltip text="Check my code 💻">
+                <a href="https://github.com/adawatia" class="underline decoration-pop-cyan decoration-4" target="_blank">GitHub</a>
+              </UTooltip>
+               or connect with me on 
+              <UTooltip text="Let's connect! 🤝">
+                <a href="https://linkedin.com/in/adawatia" class="underline decoration-pop-pink decoration-4" target="_blank">LinkedIn</a>
+              </UTooltip>.
             </p>
             <p class="text-lg leading-loose font-medium text-gray-800 mb-6">
               Proficient in Python (FastAPI, Django) and orchestrating containerized workloads on AWS and GCP. Experienced in engineering robust server-side solutions and integrating production-grade AI pipelines.
             </p>
             <div class="flex flex-wrap gap-2 mt-4">
-               <span class="px-3 py-1 bg-gray-100 border border-black rounded font-bold text-sm">🥋 Karate</span>
-               <span class="px-3 py-1 bg-gray-100 border border-black rounded font-bold text-sm">📚 Reading</span>
-               <span class="px-3 py-1 bg-gray-100 border border-black rounded font-bold text-sm">🐧 Linux</span>
+               <UTooltip text="Black Belt in coding? 🥋">
+                 <span class="px-3 py-1 bg-gray-100 border border-black rounded font-bold text-sm cursor-default flex items-center gap-1">
+                   <UIcon name="i-fluent-emoji-high-contrast-martial-arts-uniform" class="w-4 h-4" /> Karate
+                 </span>
+               </UTooltip>
+               <UTooltip text="Knowledge sponge 📚">
+                 <span class="px-3 py-1 bg-gray-100 border border-black rounded font-bold text-sm cursor-default flex items-center gap-1">
+                   <UIcon name="i-heroicons-book-open-solid" class="w-4 h-4" /> Reading
+                 </span>
+               </UTooltip>
+               <UTooltip text="I use Linux Mint btw 🐧">
+                 <span class="px-3 py-1 bg-gray-100 border border-black rounded font-bold text-sm cursor-default flex items-center gap-1">
+                   <UIcon name="i-logos-linux-tux" class="w-4 h-4" /> Linux
+                 </span>
+               </UTooltip>
             </div>
           </div>
 
@@ -118,10 +137,10 @@ const handleNotify = () => {
                 <TechPill name="Linux" icon="i-logos-linux-tux" class="bg-gray-50" />
                 <TechPill name="PostgreSQL" icon="i-logos-postgresql" class="bg-blue-50" />
                 <TechPill name="MongoDB" icon="i-logos-mongodb-icon" class="bg-green-50" />
-                <TechPill name="PyTorch" icon="i-logos-pytorch-icon" class="bg-orange-50" />
+                <TechPill name="ImageKit" icon="https://cdn.brandfetch.io/id8c1BII23/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1712150692788" class="bg-blue-50" />
                 <TechPill name="LangChain" icon="i-heroicons-link-solid" class="bg-green-50" />
                 <TechPill name="React" icon="i-logos-react" class="bg-cyan-50" />
-                <TechPill name="Streamlit" icon="i-heroicons-computer-desktop-solid" class="bg-red-50" />
+                <TechPill name="Streamlit" icon="https://cdn.brandfetch.io/idiyFucwEQ/theme/dark/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1668515715588" class="bg-red-50" />
               </div>
             </div>
             
@@ -146,16 +165,16 @@ const handleNotify = () => {
                      <h4 class="font-bold text-sm mb-2 text-gray-500 uppercase tracking-wider">Relevant Loot (Coursework)</h4>
                      <div class="flex flex-wrap gap-2">
                        <UTooltip text="Design & Analysis of Algorithms">
-                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-purple/20 cursor-help transition-colors">Algorithms</span>
+                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-purple/20 cursor-default transition-colors">Algorithms</span>
                        </UTooltip>
                        <UTooltip text="Advanced Data Structures">
-                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-cyan/20 cursor-help transition-colors">Data Structures</span>
+                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-cyan/20 cursor-default transition-colors">Data Structures</span>
                        </UTooltip>
                        <UTooltip text="Deep Learning & Neural Networks">
-                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-yellow/20 cursor-help transition-colors">Machine Learning</span>
+                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-yellow/20 cursor-default transition-colors">Machine Learning</span>
                        </UTooltip>
                        <UTooltip text="Image Processing & CNNs">
-                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-pink/20 cursor-help transition-colors">Computer Vision</span>
+                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-pink/20 cursor-default transition-colors">Computer Vision</span>
                        </UTooltip>
                      </div>
                   </div>
@@ -242,7 +261,7 @@ const handleNotify = () => {
               <ProjectCard 
                   title="Kuebiko Comics"
                   description="Full-stack comic platform connecting independent Indian artists with readers. Features auth, RBAC, and neobrutalist design."
-                  :tags="['Vue.js', 'FastAPI', 'PostgreSQL', 'Render']"
+                  :tags="['Vue.js', 'FastAPI', 'PostgreSQL', 'Render','ImageKit']"
                   link="https://comic-eight-dusky.vercel.app/"
                   class="transform hover:rotate-1"
                   wip
@@ -294,24 +313,35 @@ const handleNotify = () => {
             </h3>
             <div class="cartoon-box p-6 bg-pop-yellow/10">
               <ul class="space-y-4">
-                 <li class="flex items-center gap-3 font-bold text-sm">
-                   <UIcon name="i-heroicons-academic-cap-solid" class="w-5 h-5 text-pop-purple" /> Summer School on AI (UUST Russia)
+                  <li class="flex items-center gap-3 font-bold text-sm">
+                    <UTooltip text="Verified Credential">
+                       <div class="flex items-center gap-3 cursor-default">
+                         <UIcon name="i-heroicons-check-badge-solid" class="w-5 h-5 text-pop-purple" /> Summer School on AI (UUST Russia)
+                       </div>
+                    </UTooltip>
                 </li>
                 <li class="flex items-center gap-3 font-bold text-sm">
-                  <UIcon name="i-logos-aws" class="w-5 h-5" /> AWS Cloud Architecting (AWS Academy)
+                  <UTooltip text="Verified Credential">
+                     <div class="flex items-center gap-3 cursor-default">
+                       <UIcon name="i-heroicons-check-badge-solid" class="w-5 h-5 text-pop-purple" /> AWS Cloud Architecting (AWS Academy)
+                     </div>
+                  </UTooltip>
                 </li>
                 <li class="flex items-center gap-3 font-bold text-sm">
-                  <UIcon name="i-heroicons-trophy-solid" class="w-5 h-5 text-pop-blue" /> ROBO AI Diamond Cert
+                  <UTooltip text="Verified Credential">
+                     <div class="flex items-center gap-3 cursor-default">
+                       <UIcon name="i-heroicons-check-badge-solid" class="w-5 h-5 text-pop-purple" /> ROBO AI Diamond Cert
+                     </div>
+                  </UTooltip>
                 </li>
                 <li class="flex items-center gap-3 font-bold text-sm">
-                  <UIcon name="i-heroicons-chart-bar-solid" class="w-5 h-5 text-pop-orange" /> Data Science using R (Chandigarh Univ)
+                   <UTooltip text="Verified Credential">
+                     <div class="flex items-center gap-3 cursor-default">
+                       <UIcon name="i-heroicons-check-badge-solid" class="w-5 h-5 text-pop-purple" /> Data Science using R (Chandigarh Univ)
+                     </div>
+                   </UTooltip>
                 </li>
               </ul>
-               <div class="mt-6 pt-4 border-t-2 border-black/10 text-center">
-                <a href="#" class="text-xs font-black uppercase hover:text-pop-purple flex items-center justify-center gap-1">
-                  View All Credentials <UIcon name="i-heroicons-arrow-top-right-on-square-20-solid" class="w-3 h-3 text-pop-purple" />
-                </a>
-              </div>
             </div>
           </section>
         </div>

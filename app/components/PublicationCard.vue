@@ -20,8 +20,12 @@
         {{ venue }}
       </div>
       
-      <div v-if="link && link !== '#'" class="mt-auto flex items-center gap-2 text-xs font-black group-hover:underline decoration-2 underline-offset-2 uppercase">
-        Read Paper <UIcon name="i-heroicons-arrow-top-right-on-square-20-solid" class="w-3 h-3 ml-0.5 text-pop-purple" />
+      <div v-if="link && link !== '#'" class="mt-auto flex items-center gap-2 text-xs font-black group-hover:underline decoration-2 underline-offset-2 uppercase w-fit">
+        <UTooltip text="Open Research Paper 📄">
+           <span class="flex items-center gap-1">
+             Read Paper <UIcon name="i-heroicons-arrow-top-right-on-square-20-solid" class="w-3 h-3 ml-0.5 text-pop-purple" />
+           </span>
+        </UTooltip>
       </div>
     </div>
   </component>
