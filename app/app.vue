@@ -77,8 +77,11 @@ const handleNotify = () => {
         <!-- About Me Sections -->
         <section id="about" class="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div class="cartoon-box p-8 bg-white rotate-1">
-            <h3 class="text-3xl font-black cartoon-title mb-6 flex items-center gap-3">
-              <UIcon name="i-heroicons-user-circle-solid" class="w-10 h-10 text-pop-purple" /> ABOUT ME
+            <h3 class="text-3xl font-black cartoon-title mb-6 flex items-center gap-4">
+              <div class="w-12 h-12 bg-pop-purple rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white">
+                <UIcon name="i-heroicons-user-circle-solid" class="w-6 h-6" />
+              </div>
+              ABOUT ME
             </h3>
             <p class="text-lg leading-loose font-medium text-gray-800 mb-6">
               I am a <span class="font-bold text-pop-purple">Backend Developer</span> specializing in scalable API architecture and cloud infrastructure. Check out my work on <a href="https://github.com/adawatia" class="underline decoration-pop-cyan decoration-4">GitHub</a> or connect with me on <a href="https://linkedin.com/in/adawatia" class="underline decoration-pop-pink decoration-4">LinkedIn</a>.
@@ -96,8 +99,10 @@ const handleNotify = () => {
           <div>
             <!-- Tech Stack -->
             <div class="mb-12">
-              <h3 class="text-3xl font-black cartoon-title mb-6 transform -rotate-1">
-                <UIcon name="i-heroicons-wrench-screwdriver-solid" class="w-8 h-8 inline-block mr-2 text-pop-orange" />
+              <h3 class="text-3xl font-black cartoon-title mb-6 transform -rotate-1 flex items-center gap-4">
+                <div class="w-12 h-12 bg-pop-orange rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white">
+                  <UIcon name="i-heroicons-wrench-screwdriver-solid" class="w-6 h-6" />
+                </div>
                 INVENTORY
               </h3>
               <div class="flex flex-wrap gap-3">
@@ -120,7 +125,12 @@ const handleNotify = () => {
             
             <!-- Education -->
              <div class="cartoon-box p-6 bg-pop-cyan/10 border-dashed">
-               <h3 class="text-2xl font-black cartoon-title mb-4">🎓 EDUCATION</h3>
+               <h3 class="text-2xl font-black cartoon-title mb-4 flex items-center gap-4">
+                 <div class="w-10 h-10 bg-pop-cyan rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white">
+                    <UIcon name="i-heroicons-academic-cap-solid" class="w-5 h-5" />
+                 </div>
+                 EDUCATION
+               </h3>
                <div class="space-y-6">
                   <div>
                     <div class="flex justify-between items-start">
@@ -231,8 +241,11 @@ const handleNotify = () => {
         <!-- Publications & Certs -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-32">
           <section class="lg:col-span-2">
-             <h3 class="text-3xl font-black cartoon-title mb-8 flex items-center gap-3">
-              <UIcon name="i-heroicons-document-text-solid" class="w-8 h-8 text-pop-cyan" /> PUBLICATIONS
+             <h3 class="text-3xl font-black cartoon-title mb-8 flex items-center gap-4">
+              <div class="w-12 h-12 bg-pop-cyan rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white">
+                <UIcon name="i-heroicons-document-text-solid" class="w-6 h-6" />
+              </div>
+              PUBLICATIONS
             </h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <PublicationCard 
@@ -253,8 +266,11 @@ const handleNotify = () => {
           </section>
 
           <section>
-             <h3 class="text-3xl font-black cartoon-title mb-8 flex items-center gap-3">
-              <UIcon name="i-heroicons-trophy-solid" class="w-8 h-8 text-pop-yellow" /> CERTIFICATIONS
+             <h3 class="text-3xl font-black cartoon-title mb-8 flex items-center gap-4">
+              <div class="w-12 h-12 bg-pop-yellow rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white">
+                <UIcon name="i-heroicons-trophy-solid" class="w-6 h-6" />
+              </div>
+              CERTIFICATIONS
             </h3>
             <div class="cartoon-box p-6 bg-pop-yellow/10">
               <ul class="space-y-4">
