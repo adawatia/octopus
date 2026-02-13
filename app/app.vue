@@ -26,8 +26,8 @@
         <div class="absolute top-10 left-10 w-16 h-16 bg-pop-purple rounded-full border-3 border-black shadow-[4px_4px_0px_0px_#000] animate-bounce delay-75 hidden lg:block opacity-20"></div>
         <div class="absolute bottom-20 right-20 w-12 h-12 bg-pop-orange rotate-12 border-3 border-black shadow-[4px_4px_0px_0px_#000] animate-pulse hidden lg:block opacity-20"></div>
 
-        <div class="inline-block px-4 py-2 bg-pop-orange border-3 border-black shadow-[4px_4px_0px_0px_#000] text-white rounded-full mb-8 font-bold transform -rotate-3 hover:rotate-0 transition-transform cursor-default animate-enter text-sm md:text-base">
-          👋 HELLO WORLD! I'M A CREATIVE DEVELOPER
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-pop-orange border-3 border-black shadow-[4px_4px_0px_0px_#000] text-white rounded-full mb-8 font-bold transform -rotate-3 hover:rotate-0 transition-transform cursor-default animate-enter text-sm md:text-base">
+          <UIcon name="i-heroicons-hand-raised-solid" class="w-5 h-5" /> HELLO WORLD! I'M A CREATIVE DEVELOPER
         </div>
         
         <h2 class="text-5xl md:text-8xl font-black mb-6 leading-none cartoon-title animate-enter delay-100">
@@ -61,7 +61,7 @@
       <section id="about" class="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         <div class="cartoon-box p-8 bg-white rotate-1">
           <h3 class="text-3xl font-black cartoon-title mb-6 flex items-center gap-3">
-            <span class="text-4xl">🧑‍💻</span> ABOUT ME
+            <UIcon name="i-heroicons-user-circle-solid" class="w-10 h-10" /> ABOUT ME
           </h3>
           <p class="text-lg leading-loose font-medium text-gray-800 mb-6">
             Born in <span class="bg-pop-pink/20 px-1 rounded">Chirawa, Rajasthan</span> and now based in Ludhiana. I developed a passion for technology through gaming, which led me to explore software development and open-source systems.
@@ -80,20 +80,23 @@
         <div>
           <!-- Tech Stack -->
           <div class="mb-12">
-            <h3 class="text-3xl font-black cartoon-title mb-6 transform -rotate-1">🛠️ INVENTORY</h3>
+            <h3 class="text-3xl font-black cartoon-title mb-6 transform -rotate-1">
+              <UIcon name="i-heroicons-wrench-screwdriver-solid" class="w-8 h-8 inline-block mr-2" />
+              INVENTORY
+            </h3>
             <div class="flex flex-wrap gap-3">
-              <TechPill name="Python" icon="🐍" class="bg-blue-50" />
-              <TechPill name="C++" icon="⚙️" class="bg-blue-50" />
-              <TechPill name="Rust" icon="🦀" class="bg-orange-50" />
-              <TechPill name="React" icon="⚛️" class="bg-cyan-50" />
-              <TechPill name="Vue/Nuxt" icon="💚" class="bg-green-50" />
-              <TechPill name="Tailwind" icon="🎨" class="bg-cyan-50" />
-              <TechPill name="Docker" icon="🐳" class="bg-blue-50" />
-              <TechPill name="AWS" icon="☁️" class="bg-yellow-50" />
-              <TechPill name="GCP" icon="🌩️" class="bg-red-50" />
-              <TechPill name="PyTorch" icon="🔥" class="bg-orange-50" />
-              <TechPill name="SQLite" icon="🗃️" class="bg-blue-50" />
-              <TechPill name="Linux" icon="🐧" class="bg-gray-50" />
+              <TechPill name="Python" icon="i-logos-python" class="bg-blue-50" />
+              <TechPill name="C++" icon="i-logos-c-plusplus" class="bg-blue-50" />
+              <TechPill name="Rust" icon="i-logos-rust" class="bg-orange-50" />
+              <TechPill name="React" icon="i-logos-react" class="bg-cyan-50" />
+              <TechPill name="Vue/Nuxt" icon="i-logos-nuxt-icon" class="bg-green-50" />
+              <TechPill name="Tailwind" icon="i-logos-tailwindcss-icon" class="bg-cyan-50" />
+              <TechPill name="Docker" icon="i-logos-docker-icon" class="bg-blue-50" />
+              <TechPill name="AWS" icon="i-logos-aws" class="bg-yellow-50" />
+              <TechPill name="GCP" icon="i-logos-google-cloud" class="bg-red-50" />
+              <TechPill name="PyTorch" icon="i-logos-pytorch-icon" class="bg-orange-50" />
+              <TechPill name="SQLite" icon="i-logos-sqlite" class="bg-blue-50" />
+              <TechPill name="Linux" icon="i-logos-linux-tux" class="bg-gray-50" />
             </div>
           </div>
           
@@ -126,7 +129,9 @@
       <!-- Experience Log -->
       <section id="experience" class="mb-32">
          <h3 class="text-4xl md:text-5xl font-black mb-12 cartoon-title flex items-center gap-4">
-            <span class="w-12 h-12 bg-pop-purple rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white text-2xl">⚡</span>
+            <div class="w-12 h-12 bg-pop-purple rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white">
+              <UIcon name="i-heroicons-bolt-solid" class="w-6 h-6" />
+            </div>
             QUEST LOG
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -159,7 +164,9 @@
       <!-- Projects -->
       <section id="work" class="mb-32">
         <h3 class="text-4xl md:text-5xl font-black mb-12 cartoon-title flex items-center gap-4">
-            <span class="w-12 h-12 bg-pop-cyan rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white text-2xl">🚀</span>
+            <div class="w-12 h-12 bg-pop-cyan rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white">
+              <UIcon name="i-heroicons-rocket-launch-solid" class="w-6 h-6" />
+            </div>
             SIDE MISSIONS
         </h3>
         
@@ -195,7 +202,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-32">
         <section class="lg:col-span-2">
            <h3 class="text-3xl font-black cartoon-title mb-8 flex items-center gap-3">
-            <span class="text-3xl">📝</span> PUBLICATIONS
+            <UIcon name="i-heroicons-document-text-solid" class="w-8 h-8" /> PUBLICATIONS
           </h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <PublicationCard 
@@ -217,28 +224,30 @@
 
         <section>
            <h3 class="text-3xl font-black cartoon-title mb-8 flex items-center gap-3">
-            <span class="text-3xl">🏆</span> CERTIFICATIONS
+            <UIcon name="i-heroicons-trophy-solid" class="w-8 h-8" /> CERTIFICATIONS
           </h3>
           <div class="cartoon-box p-6 bg-pop-yellow/10">
             <ul class="space-y-4">
               <li class="flex items-center gap-3 font-bold text-sm">
-                <span class="text-xl">🔐</span> Google IT Automation (Python)
+                <UIcon name="i-logos-google-icon" class="w-5 h-5" /> Google IT Automation (Python)
               </li>
               <li class="flex items-center gap-3 font-bold text-sm">
-                <span class="text-xl">☁️</span> AWS Academy Cloud Architecting
+                <UIcon name="i-logos-aws" class="w-5 h-5" /> AWS Academy Cloud Architecting
               </li>
               <li class="flex items-center gap-3 font-bold text-sm">
-                <span class="text-xl">🤖</span> Summer School on AI (Russia)
+                 <UIcon name="i-heroicons-academic-cap-solid" class="w-5 h-5 text-pop-purple" /> Summer School on AI (Russia)
               </li>
               <li class="flex items-center gap-3 font-bold text-sm">
-                <span class="text-xl">📡</span> NPTEL IoT (Gold)
+                <UIcon name="i-heroicons-wifi-solid" class="w-5 h-5 text-pop-orange" /> NPTEL IoT (Gold)
               </li>
               <li class="flex items-center gap-3 font-bold text-sm">
-                <span class="text-xl">🐧</span> NDG Linux Unhatched
+                <UIcon name="i-logos-linux-tux" class="w-5 h-5" /> NDG Linux Unhatched
               </li>
             </ul>
              <div class="mt-6 pt-4 border-t-2 border-black/10 text-center">
-              <a href="#" class="text-xs font-black uppercase hover:text-pop-purple">View All Credentials ↗</a>
+              <a href="#" class="text-xs font-black uppercase hover:text-pop-purple flex items-center justify-center gap-1">
+                View All Credentials <UIcon name="i-heroicons-arrow-top-right-on-square-20-solid" class="w-3 h-3" />
+              </a>
             </div>
           </div>
         </section>
@@ -247,11 +256,13 @@
        <!-- Blog -->
        <section id="blog" class="mb-32">
           <h3 class="text-4xl font-black cartoon-title mb-10 flex items-center gap-4">
-             <span class="w-12 h-12 bg-pop-pink rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white text-2xl">✍️</span>
+             <div class="w-12 h-12 bg-pop-pink rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white">
+                <UIcon name="i-heroicons-pencil-square-solid" class="w-6 h-6" />
+              </div>
             LATEST LOGS
           </h3>
           <div class="cartoon-box p-12 text-center bg-gray-50 border-dashed">
-             <div class="text-6xl mb-4">🚧</div>
+             <UIcon name="i-heroicons-cog-6-tooth-solid" class="w-16 h-16 mb-4 text-gray-400" />
              <h4 class="text-2xl font-black mb-2">WRITING IN PROGRESS</h4>
              <p class="text-gray-600 mb-6">Compiling thoughts on Linux, Architecture, and Gaming benchmarks.</p>
              <UButton class="border-2 border-black">Notify Me</UButton>
