@@ -215,25 +215,22 @@ const handleNotify = () => {
                   title="DeoAI"
                   description="Modular pipeline to transform scripts into faceless videos with AI-generated visuals and voiceovers."
                   :tags="['Python', 'PyTorch', 'Diffusers', 'FFmpeg']"
+                  link="https://github.com/adawatia/deoAI"
                   class="transform hover:rotate-1"
               />
               <ProjectCard 
                   title="PaperWise"
-                  description="Intelligent PDF assistant for seamless document interaction, smart Q&A, and offline AI processing."
-                  :tags="['PySide6', 'Ollama', 'LangChain']"
+                  description="Engineered an intelligent PDF assistant using PySide6, Ollama, and PyMuPDF for seamless document interaction, smart Q&A, and offline AI processing."
+                  :tags="['PySide6', 'Ollama', 'PyMuPDF', 'Requests']"
+                  link="https://github.com/adawatia/PaperWise"
                   class="transform hover:-rotate-1"
-              />
-              <ProjectCard 
-                  title="Big Defend"
-                  description="Open-source real-time cybersecurity incident response system using Big Data technologies."
-                  :tags="['NumPy', 'Nmap', 'Scapy']"
-                  class="transform hover:rotate-1"
               />
                <ProjectCard 
-                  title="Telemedicine Platform"
-                  description="Cloud-Based Telemedicine Platform enhancing healthcare accessibility through technology."
-                  :tags="['Cloud', 'Web', 'Healthcare']"
-                  class="transform hover:-rotate-1"
+                  title="Big Defend"
+                  description="An open-source real-time Cybersecurity incident response system using Big Data."
+                  :tags="['NumPy', 'Nmap', 'Requests', 'Scapy', 'Scikit-learn']"
+                  link="https://github.com/adawatia/BigDefend"
+                  class="transform hover:rotate-1"
               />
           </div>
         </section>
