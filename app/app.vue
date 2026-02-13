@@ -187,9 +187,9 @@ const handleNotify = () => {
                </h3>
                <div class="space-y-6">
                   <div>
-                    <div class="flex justify-between items-start">
+                    <div class="flex justify-between items-start gap-2">
                       <h4 class="font-bold text-lg">B.E. Computer Science</h4>
-                      <span class="text-sm font-bold bg-white border border-black px-2 rounded">2021-2025</span>
+                      <span class="text-sm font-bold bg-white border border-black px-2 rounded whitespace-nowrap shrink-0">2021-2025</span>
                     </div>
                     <div class="text-gray-600 font-medium">Chandigarh University</div>
                     <div class="text-sm font-bold text-pop-purple mt-1">CGPA: 7.79</div>
