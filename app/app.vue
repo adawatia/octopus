@@ -27,7 +27,7 @@
         <div class="absolute bottom-20 right-20 w-12 h-12 bg-pop-orange rotate-12 border-3 border-black shadow-[4px_4px_0px_0px_#000] animate-pulse hidden lg:block opacity-20"></div>
 
         <div class="inline-flex items-center gap-2 px-4 py-2 bg-pop-orange border-3 border-black shadow-[4px_4px_0px_0px_#000] text-white rounded-full mb-8 font-bold transform -rotate-3 hover:rotate-0 transition-transform cursor-default animate-enter text-sm md:text-base">
-          <UIcon name="i-heroicons-hand-raised-solid" class="w-5 h-5" /> HELLO WORLD! I'M A CREATIVE DEVELOPER
+          <UIcon name="i-heroicons-hand-raised-solid" class="w-5 h-5 text-yellow-300" /> HELLO WORLD! I'M A CREATIVE DEVELOPER
         </div>
         
         <h2 class="text-5xl md:text-8xl font-black mb-6 leading-none cartoon-title animate-enter delay-100">
@@ -61,7 +61,7 @@
       <section id="about" class="mb-32 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         <div class="cartoon-box p-8 bg-white rotate-1">
           <h3 class="text-3xl font-black cartoon-title mb-6 flex items-center gap-3">
-            <UIcon name="i-heroicons-user-circle-solid" class="w-10 h-10" /> ABOUT ME
+            <UIcon name="i-heroicons-user-circle-solid" class="w-10 h-10 text-pop-purple" /> ABOUT ME
           </h3>
           <p class="text-lg leading-loose font-medium text-gray-800 mb-6">
             Born in <span class="bg-pop-pink/20 px-1 rounded">Chirawa, Rajasthan</span> and now based in Ludhiana. I developed a passion for technology through gaming, which led me to explore software development and open-source systems.
@@ -81,7 +81,7 @@
           <!-- Tech Stack -->
           <div class="mb-12">
             <h3 class="text-3xl font-black cartoon-title mb-6 transform -rotate-1">
-              <UIcon name="i-heroicons-wrench-screwdriver-solid" class="w-8 h-8 inline-block mr-2" />
+              <UIcon name="i-heroicons-wrench-screwdriver-solid" class="w-8 h-8 inline-block mr-2 text-pop-orange" />
               INVENTORY
             </h3>
             <div class="flex flex-wrap gap-3">
@@ -202,7 +202,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-32">
         <section class="lg:col-span-2">
            <h3 class="text-3xl font-black cartoon-title mb-8 flex items-center gap-3">
-            <UIcon name="i-heroicons-document-text-solid" class="w-8 h-8" /> PUBLICATIONS
+            <UIcon name="i-heroicons-document-text-solid" class="w-8 h-8 text-pop-cyan" /> PUBLICATIONS
           </h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <PublicationCard 
@@ -224,7 +224,7 @@
 
         <section>
            <h3 class="text-3xl font-black cartoon-title mb-8 flex items-center gap-3">
-            <UIcon name="i-heroicons-trophy-solid" class="w-8 h-8" /> CERTIFICATIONS
+            <UIcon name="i-heroicons-trophy-solid" class="w-8 h-8 text-pop-yellow" /> CERTIFICATIONS
           </h3>
           <div class="cartoon-box p-6 bg-pop-yellow/10">
             <ul class="space-y-4">
@@ -246,7 +246,7 @@
             </ul>
              <div class="mt-6 pt-4 border-t-2 border-black/10 text-center">
               <a href="#" class="text-xs font-black uppercase hover:text-pop-purple flex items-center justify-center gap-1">
-                View All Credentials <UIcon name="i-heroicons-arrow-top-right-on-square-20-solid" class="w-3 h-3" />
+                View All Credentials <UIcon name="i-heroicons-arrow-top-right-on-square-20-solid" class="w-3 h-3 text-pop-purple" />
               </a>
             </div>
           </div>
@@ -262,7 +262,7 @@
             LATEST LOGS
           </h3>
           <div class="cartoon-box p-12 text-center bg-gray-50 border-dashed">
-             <UIcon name="i-heroicons-cog-6-tooth-solid" class="w-16 h-16 mb-4 text-gray-400" />
+             <UIcon name="i-heroicons-cog-6-tooth-solid" class="w-16 h-16 mb-4 text-pop-pink" />
              <h4 class="text-2xl font-black mb-2">WRITING IN PROGRESS</h4>
              <p class="text-gray-600 mb-6">Compiling thoughts on Linux, Architecture, and Gaming benchmarks.</p>
              <UButton class="border-2 border-black">Notify Me</UButton>

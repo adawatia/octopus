@@ -17,7 +17,7 @@
       <div class="text-xs font-black uppercase tracking-wider mb-2 text-gray-500">Key Quests Completed:</div>
       <ul class="space-y-1.5 list-none">
         <li v-for="(achievement, idx) in achievements" :key="idx" class="text-sm flex items-start gap-2">
-          <UIcon name="i-heroicons-bolt-solid" class="text-pop-purple w-4 h-4 mt-0.5" />
+          <UIcon name="i-ph-lightning-fill" class="text-pop-purple w-4 h-4 mt-0.5" />
           <span>{{ achievement }}</span>
         </li>
       </ul>

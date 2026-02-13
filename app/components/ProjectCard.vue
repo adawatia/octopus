@@ -1,7 +1,7 @@
 <template>
     <div class="cartoon-box p-6 h-full flex flex-col justify-between group cursor-pointer hover:bg-pop-pink/10 transition-colors duration-300 relative overflow-hidden">
         <div class="absolute -right-8 -top-8 w-24 h-24 rounded-full bg-white border-2 border-black flex items-end justify-start p-4 rotate-12 group-hover:scale-110 transition-transform">
-           <UIcon name="i-heroicons-code-bracket-solid" class="text-2xl w-8 h-8" />
+           <UIcon name="i-heroicons-code-bracket-solid" class="text-2xl w-8 h-8 text-pop-cyan" />
         </div>
         
         <div>
