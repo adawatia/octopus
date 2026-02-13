@@ -6,9 +6,11 @@
     class="cartoon-box p-6 h-full flex flex-col justify-between group hover:bg-pop-pink/10 transition-colors duration-300 relative overflow-hidden"
     :class="{ 'cursor-pointer': link && link !== '#' }"
   >
-    <div class="absolute -right-8 -top-8 w-24 h-24 rounded-full bg-white border-2 border-black flex items-end justify-start p-4 rotate-12 group-hover:scale-110 transition-transform">
-      <UIcon name="i-heroicons-code-bracket-solid" class="text-2xl w-8 h-8 text-pop-cyan" />
-    </div>
+    <UTooltip text="View Source" :popper="{ placement: 'left' }">
+      <div class="absolute -right-8 -top-8 w-24 h-24 rounded-full bg-white border-2 border-black flex items-end justify-start p-4 rotate-12 group-hover:scale-110 transition-transform">
+        <UIcon name="i-heroicons-code-bracket-solid" class="text-2xl w-8 h-8 text-pop-cyan" />
+      </div>
+    </UTooltip>
     
     <div>
       <h4 class="text-2xl font-black mb-3 cartoon-title leading-tight">{{ title }}</h4>

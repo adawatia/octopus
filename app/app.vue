@@ -6,7 +6,7 @@ const handleNotify = () => {
     title: 'Newsletter',
     description: "You're on the list! Stay tuned for updates.",
     icon: 'i-heroicons-check-circle-solid',
-    color: 'green'
+    color: 'success'
   })
 }
 </script>
@@ -62,15 +62,17 @@ const handleNotify = () => {
             >
               VIEW MY QUESTS 👇
             </UButton>
-             <UButton 
-              size="xl"
-              variant="ghost"
-              class="rounded-xl border-3 border-black bg-white text-black font-bold text-lg px-8 py-3 shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all"
-              to="https://github.com/adawatia"
-              target="_blank"
-            >
-              GITHUB 👾
-            </UButton>
+             <UTooltip text="Check my Repos">
+               <UButton 
+                size="xl"
+                variant="ghost"
+                class="rounded-xl border-3 border-black bg-white text-black font-bold text-lg px-8 py-3 shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all"
+                to="https://github.com/adawatia"
+                target="_blank"
+              >
+                GITHUB 👾
+              </UButton>
+            </UTooltip>
           </div>
         </header>
 
@@ -143,10 +145,18 @@ const handleNotify = () => {
                   <div class="border-t border-black/10 pt-4">
                      <h4 class="font-bold text-sm mb-2 text-gray-500 uppercase tracking-wider">Relevant Loot (Coursework)</h4>
                      <div class="flex flex-wrap gap-2">
-                       <span class="text-xs bg-white px-2 py-1 rounded border border-black/20">Algorithms</span>
-                       <span class="text-xs bg-white px-2 py-1 rounded border border-black/20">Data Structures</span>
-                       <span class="text-xs bg-white px-2 py-1 rounded border border-black/20">Machine Learning</span>
-                       <span class="text-xs bg-white px-2 py-1 rounded border border-black/20">Computer Vision</span>
+                       <UTooltip text="Design & Analysis of Algorithms">
+                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-purple/20 cursor-help transition-colors">Algorithms</span>
+                       </UTooltip>
+                       <UTooltip text="Advanced Data Structures">
+                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-cyan/20 cursor-help transition-colors">Data Structures</span>
+                       </UTooltip>
+                       <UTooltip text="Deep Learning & Neural Networks">
+                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-yellow/20 cursor-help transition-colors">Machine Learning</span>
+                       </UTooltip>
+                       <UTooltip text="Image Processing & CNNs">
+                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-pink/20 cursor-help transition-colors">Computer Vision</span>
+                       </UTooltip>
                      </div>
                   </div>
                </div>
