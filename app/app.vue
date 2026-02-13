@@ -235,6 +235,14 @@ const handleNotify = () => {
                   link="https://github.com/adawatia/PaperWise"
                   class="transform hover:-rotate-1"
               />
+              <ProjectCard 
+                  title="Kuebiko Comics"
+                  description="Full-stack comic platform connecting independent Indian artists with readers. Features auth, RBAC, and neobrutalist design."
+                  :tags="['Vue.js', 'FastAPI', 'PostgreSQL', 'Render']"
+                  link="https://comic-eight-dusky.vercel.app/"
+                  class="transform hover:rotate-1"
+                  wip
+              />
                <ProjectCard 
                   title="Big Defend"
                   description="An open-source real-time Cybersecurity incident response system using Big Data."
