@@ -1,5 +1,7 @@
 <template>
-  <div class="min-h-screen relative font-sans text-candy-text selection:bg-pop-pink selection:text-white">
+  <div class="min-h-screen relative font-sans text-candy-text selection:bg-pop-pink selection:text-white cursor-none">
+    <CustomCursor />
+    <Marquee />
     <!-- Dotted Background -->
     <div class="fixed inset-0 z-[-1] bg-candy-bg">
         <div class="absolute inset-0 bg-dots pointer-events-none"></div>
