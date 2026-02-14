@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const toast = useToast()
+const config = useRuntimeConfig()
+const resumeLink = `${config.app.baseURL}resume.pdf`
 
 const handleNotify = () => {
   try {
@@ -205,7 +207,7 @@ useHead({
                 size="xl"
                 variant="ghost"
                 class="rounded-xl border-3 border-black bg-pop-cyan text-black font-bold text-base md:text-lg px-6 md:px-8 py-3 shadow-hard hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all w-full md:w-auto justify-center"
-                to="/resume.pdf"
+                :to="resumeLink"
                 target="_blank"
                 rel="noopener noreferrer"
                 download="Devansh-Sharma-Resume.pdf"
@@ -554,7 +556,7 @@ useHead({
                               </a>
                           </UTooltip>
                            <UTooltip ignore-non-keyboard-focus text="Download Resume">
-                              <a href="/resume.pdf" download="Devansh-Sharma-Resume.pdf" class="block hover:scale-125 transition-transform">
+                              <a :href="resumeLink" download="Devansh-Sharma-Resume.pdf" class="block hover:scale-125 transition-transform">
                                   <UIcon name="i-heroicons-document-arrow-down-solid" class="w-6 h-6 text-pop-pink" />
                               </a>
                           </UTooltip>
