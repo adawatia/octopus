@@ -3,13 +3,13 @@
     <div class="marquee-wrapper">
       <div class="marquee-content inline-block whitespace-nowrap animate-marquee">
         <span v-for="i in 10" :key="i" class="mx-4 font-black text-sm md:text-base tracking-widest text-black">
-          ★ OPEN FOR WORK ★ VUE ★ NUXT ★ CREATIVE ★ DESIGN ★
+          ★ OPEN FOR WORK ★ VUE ★ NUXT ★ FASTAPI ★ DJANGO ★ CREATIVE ★ DESIGN ★
         </span>
       </div>
       <!-- Duplicate content for seamless loop -->
       <div class="marquee-content inline-block whitespace-nowrap animate-marquee" aria-hidden="true">
         <span v-for="i in 10" :key="`dup-${i}`" class="mx-4 font-black text-sm md:text-base tracking-widest text-black">
-          ★ OPEN FOR WORK ★ VUE ★ NUXT ★ CREATIVE ★ DESIGN ★
+          ★ OPEN FOR WORK ★ VUE ★ NUXT ★ FASTAPI ★ DJANGO ★ CREATIVE ★ DESIGN ★
         </span>
       </div>
     </div>

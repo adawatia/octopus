@@ -10,6 +10,54 @@ export default defineNuxtConfig({
   app: {
     baseURL: process.env.NODE_ENV === 'production' ? '/octopus/' : '/',
     buildAssetsDir: 'assets',
+    head: {
+      htmlAttrs: {
+        lang: 'en'
+      },
+      title: 'Devansh Sharma (adawatia) - AI Backend Engineer & Cloud Architect',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { 
+          name: 'description', 
+          content: 'Devansh Sharma (adawatia) - AI Backend Engineer specializing in FastAPI, Django, AWS, and scalable cloud architecture. Portfolio showcasing production-grade AI pipelines and backend solutions.' 
+        },
+        { 
+          name: 'keywords', 
+          content: 'adawatia, Devansh Sharma, AI Engineer, Backend Developer, FastAPI, Django, AWS, GCP, Python Developer, Cloud Architect, Machine Learning Engineer, Full Stack Developer, Chandigarh University, IIT Guwahati, Zryth Solutions' 
+        },
+        { name: 'author', content: 'Devansh Sharma (adawatia)' },
+        { name: 'robots', content: 'index, follow' },
+        { name: 'googlebot', content: 'index, follow' },
+        
+        // Open Graph / Facebook
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://adawatia.github.io/octopus/' },
+        { property: 'og:title', content: 'Devansh Sharma (adawatia) - AI Backend Engineer & Cloud Architect' },
+        { property: 'og:description', content: 'AI Backend Engineer specializing in FastAPI, Django, AWS, and scalable cloud architecture. Building production-grade AI pipelines and robust backend solutions.' },
+        { property: 'og:site_name', content: 'Devansh Sharma Portfolio' },
+        { property: 'og:locale', content: 'en_US' },
+        
+        // Twitter Card
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:url', content: 'https://adawatia.github.io/octopus/' },
+        { name: 'twitter:title', content: 'Devansh Sharma (adawatia) - AI Backend Engineer' },
+        { name: 'twitter:description', content: 'AI Backend Engineer specializing in FastAPI, Django, AWS, and scalable cloud architecture.' },
+        
+        // Additional SEO
+        { name: 'theme-color', content: '#FFD93D' },
+        { name: 'msapplication-TileColor', content: '#FFD93D' },
+        { name: 'apple-mobile-web-app-capable', content: 'yes' },
+        { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
+        
+        // Verification tags (add your own when you get them)
+        // { name: 'google-site-verification', content: 'YOUR_VERIFICATION_CODE' },
+      ],
+      link: [
+        { rel: 'canonical', href: 'https://adawatia.github.io/octopus/' },
+        { rel: 'icon', type: 'image/x-icon', href: '/octopus/favicon.ico' },
+      ]
+    }
   },
   
   // Enable static site generation
