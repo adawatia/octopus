@@ -1,2 +1,32 @@
+# Allow all search engines and AI crawlers
 User-Agent: *
-Disallow:
+Allow: /
+
+# Sitemap location
+Sitemap: https://adawatia.github.io/octopus/sitemap.xml
+
+# Specific crawlers
+User-Agent: Googlebot
+Allow: /
+
+User-Agent: Bingbot
+Allow: /
+
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: ChatGPT-User
+Allow: /
+
+User-Agent: Claude-Web
+Allow: /
+
+User-Agent: PerplexityBot
+Allow: /
+
+User-Agent: anthropic-ai
+Allow: /
+
+User-Agent: Applebot
+Allow: /
+
