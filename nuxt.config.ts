@@ -8,6 +8,10 @@ export default defineNuxtConfig({
   srcDir: 'app',
   css: ['~/assets/css/main.css'],
   
+  colorMode: {
+    preference: 'light'
+  },
+  
   // GitHub Pages configuration
   app: {
     baseURL: basePath,

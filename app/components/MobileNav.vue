@@ -22,7 +22,7 @@
 <style scoped>
 .mobile-nav {
   @apply fixed bottom-0 left-0 right-0 z-50;
-  @apply bg-white border-t-3 border-black;
+  @apply bg-white border-t-[3px] border-black;
   @apply flex justify-around items-center;
   @apply px-4 py-3;
   @apply shadow-[0px_-4px_0px_0px_#000];

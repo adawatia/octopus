@@ -5,6 +5,10 @@ const toast = useToast()
 const config = useRuntimeConfig()
 const resumeLink = `${config.app.baseURL}resume.pdf`
 
+// Force light mode
+const colorMode = useColorMode()
+colorMode.preference = 'light'
+
 const confettiInterval = ref<any>(null)
 const celebrationSound = ref<HTMLAudioElement | null>(null)
 
@@ -229,10 +233,10 @@ useHead({
 
         <!-- Hero Section -->
         <header class="min-h-[50vh] md:min-h-[60vh] flex flex-col justify-center items-center text-center mb-16 md:mb-32 relative px-2 mt-12 md:mt-0">
-          <div class="absolute top-10 left-10 w-16 h-16 bg-pop-purple rounded-full border-3 border-black shadow-hard animate-bounce delay-75 hidden lg:block opacity-20"></div>
-          <div class="absolute bottom-20 right-20 w-12 h-12 bg-pop-orange rotate-12 border-3 border-black shadow-hard animate-pulse hidden lg:block opacity-20"></div>
+          <div class="absolute top-10 left-10 w-16 h-16 bg-pop-purple rounded-full border-[3px] border-black shadow-hard animate-bounce delay-75 hidden lg:block opacity-20"></div>
+          <div class="absolute bottom-20 right-20 w-12 h-12 bg-pop-orange rotate-12 border-[3px] border-black shadow-hard animate-pulse hidden lg:block opacity-20"></div>
 
-          <div class="inline-flex items-center gap-2 px-3 md:px-4 py-2 bg-pop-orange border-3 border-black shadow-hard text-white rounded-full mb-6 md:mb-8 font-bold transform -rotate-3 hover:rotate-0 transition-transform cursor-default animate-enter text-xs md:text-base">
+          <div class="inline-flex items-center gap-2 px-3 md:px-4 py-2 bg-pop-orange border-[3px] border-black shadow-hard text-white rounded-full mb-6 md:mb-8 font-bold transform -rotate-3 hover:rotate-0 transition-transform cursor-default animate-enter text-xs md:text-base">
             <UIcon name="i-heroicons-hand-raised-solid" class="w-4 h-4 md:w-5 md:h-5 text-yellow-300" /> HELLO WORLD! I'M DEVANSH SHARMA
           </div>
           
@@ -250,7 +254,7 @@ useHead({
             <a 
               @click.prevent="scrollToSection('experience')"
               href="#experience"
-              class="inline-flex items-center justify-center rounded-xl border-3 border-black bg-pop-yellow text-black font-black text-base md:text-lg px-6 md:px-8 py-3 shadow-hard hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all transform hover:rotate-1 w-full md:w-auto cursor-pointer"
+              class="inline-flex items-center justify-center rounded-xl border-[3px] border-black bg-pop-yellow text-black font-black text-base md:text-lg px-6 md:px-8 py-3 shadow-hard hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all transform hover:rotate-1 w-full md:w-auto cursor-pointer"
             >
               VIEW MY QUESTS <UIcon name="i-heroicons-arrow-down-circle-solid" class="w-5 h-5 md:w-6 md:h-6 ml-2" />
             </a>
@@ -258,7 +262,7 @@ useHead({
                <UButton 
                 size="xl"
                 variant="ghost"
-                class="rounded-xl border-3 border-black bg-white text-black font-bold text-base md:text-lg px-6 md:px-8 py-3 shadow-hard hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all w-full md:w-auto justify-center"
+                class="rounded-xl border-[3px] border-black bg-white text-black font-bold text-base md:text-lg px-6 md:px-8 py-3 shadow-hard hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all w-full md:w-auto justify-center"
                 to="https://github.com/adawatia"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -270,7 +274,7 @@ useHead({
                <UButton 
                 size="xl"
                 variant="ghost"
-                class="rounded-xl border-3 border-black bg-pop-cyan text-black font-bold text-base md:text-lg px-6 md:px-8 py-3 shadow-hard hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all w-full md:w-auto justify-center"
+                class="rounded-xl border-[3px] border-black bg-pop-cyan text-black font-bold text-base md:text-lg px-6 md:px-8 py-3 shadow-hard hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all w-full md:w-auto justify-center"
                 :to="resumeLink"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -287,7 +291,7 @@ useHead({
         <section id="about" class="mb-16 md:mb-32 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
           <div class="cartoon-box p-6 md:p-8 bg-white rotate-1">
             <h3 class="text-2xl md:text-3xl font-black cartoon-title mb-4 md:mb-6 flex items-center gap-3 md:gap-4">
-              <div class="w-12 h-12 bg-pop-purple rounded-lg border-3 border-black shadow-hard flex items-center justify-center text-white">
+              <div class="w-12 h-12 bg-pop-purple rounded-lg border-[3px] border-black shadow-hard flex items-center justify-center text-white">
                 <UIcon name="i-heroicons-user-circle-solid" class="w-6 h-6" />
               </div>
               ABOUT ME
@@ -328,7 +332,7 @@ useHead({
             <!-- Tech Stack -->
             <div class="mb-8 md:mb-12">
               <h3 class="text-2xl md:text-3xl font-black cartoon-title mb-4 md:mb-6 transform -rotate-1 flex items-center gap-3 md:gap-4">
-                <div class="w-12 h-12 bg-pop-orange rounded-lg border-3 border-black shadow-hard flex items-center justify-center text-white">
+                <div class="w-12 h-12 bg-pop-orange rounded-lg border-[3px] border-black shadow-hard flex items-center justify-center text-white">
                   <UIcon name="i-heroicons-wrench-screwdriver-solid" class="w-6 h-6" />
                 </div>
                 INVENTORY
@@ -354,7 +358,7 @@ useHead({
             <!-- Education -->
              <div class="cartoon-box p-6 bg-pop-cyan/10 border-dashed">
                <h3 class="text-2xl font-black cartoon-title mb-4 flex items-center gap-4">
-                 <div class="w-10 h-10 bg-pop-cyan rounded-lg border-3 border-black shadow-hard flex items-center justify-center text-white">
+                 <div class="w-10 h-10 bg-pop-cyan rounded-lg border-[3px] border-black shadow-hard flex items-center justify-center text-white">
                     <UIcon name="i-heroicons-academic-cap-solid" class="w-5 h-5" />
                  </div>
                  EDUCATION
@@ -411,7 +415,7 @@ useHead({
         <!-- Experience Log -->
         <section id="experience" class="mb-16 md:mb-32">
            <h3 class="text-3xl md:text-5xl font-black mb-8 md:mb-12 cartoon-title flex items-center gap-3 md:gap-4">
-              <div class="w-12 h-12 bg-pop-purple rounded-lg border-3 border-black shadow-hard flex items-center justify-center text-white">
+              <div class="w-12 h-12 bg-pop-purple rounded-lg border-[3px] border-black shadow-hard flex items-center justify-center text-white">
                 <UIcon name="i-heroicons-bolt-solid" class="w-6 h-6" />
               </div>
               QUEST LOG
@@ -462,7 +466,7 @@ useHead({
         <!-- Projects -->
         <section id="work" class="mb-16 md:mb-32">
           <h3 class="text-3xl md:text-5xl font-black mb-8 md:mb-12 cartoon-title flex items-center gap-3 md:gap-4">
-              <div class="w-12 h-12 bg-pop-cyan rounded-lg border-3 border-black shadow-hard flex items-center justify-center text-white">
+              <div class="w-12 h-12 bg-pop-cyan rounded-lg border-[3px] border-black shadow-hard flex items-center justify-center text-white">
                 <UIcon name="i-heroicons-rocket-launch-solid" class="w-6 h-6" />
               </div>
               SIDE MISSIONS
@@ -505,7 +509,7 @@ useHead({
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 mb-16 md:mb-32">
           <section class="lg:col-span-2">
              <h3 class="text-2xl md:text-3xl font-black cartoon-title mb-6 md:mb-8 flex items-center gap-3 md:gap-4">
-              <div class="w-12 h-12 bg-pop-cyan rounded-lg border-3 border-black shadow-hard flex items-center justify-center text-white">
+              <div class="w-12 h-12 bg-pop-cyan rounded-lg border-[3px] border-black shadow-hard flex items-center justify-center text-white">
                 <UIcon name="i-heroicons-document-text-solid" class="w-6 h-6" />
               </div>
               PUBLICATIONS
@@ -531,7 +535,7 @@ useHead({
 
           <section>
              <h3 class="text-2xl md:text-3xl font-black cartoon-title mb-6 md:mb-8 flex items-center gap-3 md:gap-4">
-              <div class="w-12 h-12 bg-pop-yellow rounded-lg border-3 border-black shadow-hard flex items-center justify-center text-white">
+              <div class="w-12 h-12 bg-pop-yellow rounded-lg border-[3px] border-black shadow-hard flex items-center justify-center text-white">
                 <UIcon name="i-heroicons-trophy-solid" class="w-6 h-6" />
               </div>
               CERTIFICATIONS
@@ -574,7 +578,7 @@ useHead({
          <!-- Blog -->
          <section id="blog" class="mb-16 md:mb-32">
             <h3 class="text-3xl md:text-4xl font-black cartoon-title mb-6 md:mb-10 flex items-center gap-3 md:gap-4">
-               <div class="w-12 h-12 bg-pop-pink rounded-lg border-3 border-black shadow-hard flex items-center justify-center text-white">
+               <div class="w-12 h-12 bg-pop-pink rounded-lg border-[3px] border-black shadow-hard flex items-center justify-center text-white">
                   <UIcon name="i-heroicons-pencil-square-solid" class="w-6 h-6" />
                 </div>
               LATEST LOGS
@@ -587,11 +591,11 @@ useHead({
             </div>
          </section>
          
-         <footer id="contact" class="border-t-3 border-black pt-12 md:pt-16 pb-24 md:pb-24 text-center bg-pop-pink/10 -mx-4 md:-mx-6 px-4 md:px-6 mt-12 md:mt-20">
+         <footer id="contact" class="border-t-[3px] border-black pt-12 md:pt-16 pb-24 md:pb-24 text-center bg-pop-pink/10 -mx-4 md:-mx-6 px-4 md:px-6 mt-12 md:mt-20">
               <div class="max-w-4xl mx-auto">
                   <h2 class="text-3xl md:text-5xl font-black cartoon-title mb-6 md:mb-8">WANNA COLLAB?</h2>
                   <p class="mb-6 md:mb-10 text-lg md:text-xl font-medium px-4">Have a cool idea? Let's make it happen!</p>
-                  <a href="mailto:dv.adawatia@gmail.com" class="inline-block text-lg md:text-3xl font-black bg-white border-3 border-black shadow-[6px_6px_0px_0px_#000] px-4 md:px-8 py-3 md:py-4 hover:bg-pop-yellow hover:scale-105 transition-all transform rotate-2 hover:rotate-0 rounded-2xl break-all">
+                  <a href="mailto:dv.adawatia@gmail.com" class="inline-block text-lg md:text-3xl font-black bg-white border-[3px] border-black shadow-[6px_6px_0px_0px_#000] px-4 md:px-8 py-3 md:py-4 hover:bg-pop-yellow hover:scale-105 transition-all transform rotate-2 hover:rotate-0 rounded-2xl break-all">
                       dv.adawatia@gmail.com
                   </a>
                   <div class="mt-6 md:mt-8 text-base md:text-xl font-bold flex flex-col gap-2">

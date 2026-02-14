@@ -28,8 +28,10 @@ body {
 }
 
 .cartoon-box {
-  @apply border-3 border-black bg-white shadow-[var(--shadow-hard)] rounded-xl;
+  @apply border-[3px] border-black bg-white shadow-[var(--shadow-hard)] rounded-xl;
   transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .cartoon-box:hover {
