@@ -236,8 +236,8 @@ useHead({
           <div class="absolute top-10 left-10 w-16 h-16 bg-pop-purple rounded-full border-[3px] border-black shadow-hard animate-bounce delay-75 hidden lg:block opacity-20"></div>
           <div class="absolute bottom-20 right-20 w-12 h-12 bg-pop-orange rotate-12 border-[3px] border-black shadow-hard animate-pulse hidden lg:block opacity-20"></div>
 
-          <div class="inline-flex items-center gap-2 px-3 md:px-4 py-2 bg-pop-orange border-[3px] border-black shadow-hard text-white rounded-full mb-6 md:mb-8 font-bold transform -rotate-3 hover:rotate-0 transition-transform cursor-default animate-enter text-xs md:text-base">
-            <UIcon name="i-heroicons-hand-raised-solid" class="w-4 h-4 md:w-5 md:h-5 text-yellow-300" /> HELLO WORLD! I'M DEVANSH SHARMA
+          <div class="inline-flex items-center justify-center gap-2 px-3 md:px-4 py-2 bg-pop-orange border-[3px] border-black shadow-hard text-white rounded-full mb-6 md:mb-8 font-bold transform -rotate-3 hover:rotate-0 transition-transform cursor-default animate-enter text-xs md:text-base max-w-[90vw] whitespace-normal text-center">
+            <UIcon name="i-heroicons-hand-raised-solid" class="w-4 h-4 md:w-5 md:h-5 text-yellow-300 shrink-0" /> HELLO WORLD! I'M DEVANSH SHARMA
           </div>
           
           <h2 class="text-4xl md:text-8xl font-black mb-4 md:mb-6 leading-tight md:leading-none cartoon-title animate-enter delay-100">
