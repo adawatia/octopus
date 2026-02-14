@@ -4,5 +4,15 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxt/ui'],
   srcDir: 'app',
-  css: ['~/assets/css/main.css']
+  css: ['~/assets/css/main.css'],
+  
+  // GitHub Pages configuration
+  app: {
+    baseURL: process.env.NODE_ENV === 'production' ? '/octopus/' : '/',
+    buildAssetsDir: 'assets',
+  },
+  
+  // Enable static site generation
+  ssr: false,
+  target: 'static'
 })
