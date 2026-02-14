@@ -5,18 +5,33 @@ const toast = useToast()
 const config = useRuntimeConfig()
 const resumeLink = `${config.app.baseURL}resume.pdf`
 
+const confettiInterval = ref<any>(null)
+
 const triggerCelebration = () => {
+  if (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return
+  }
+  
   const duration = 3 * 1000
   const animationEnd = Date.now() + duration
   const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 100 }
 
   const randomInRange = (min: number, max: number) => Math.random() * (max - min) + min
 
-  const interval: any = setInterval(function() {
+  if (confettiInterval.value) {
+    clearInterval(confettiInterval.value)
+    confettiInterval.value = null
+  }
+
+  confettiInterval.value = setInterval(function() {
     const timeLeft = animationEnd - Date.now()
 
     if (timeLeft <= 0) {
-      return clearInterval(interval)
+      if (confettiInterval.value) {
+        clearInterval(confettiInterval.value)
+        confettiInterval.value = null
+      }
+      return
     }
 
     const particleCount = 50 * (timeLeft / duration)
