@@ -1,7 +1,37 @@
 <script setup lang="ts">
+import confetti from 'canvas-confetti'
+
 const toast = useToast()
 const config = useRuntimeConfig()
 const resumeLink = `${config.app.baseURL}resume.pdf`
+
+const triggerCelebration = () => {
+  const duration = 3 * 1000
+  const animationEnd = Date.now() + duration
+  const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 100 }
+
+  const randomInRange = (min: number, max: number) => Math.random() * (max - min) + min
+
+  const interval: any = setInterval(function() {
+    const timeLeft = animationEnd - Date.now()
+
+    if (timeLeft <= 0) {
+      return clearInterval(interval)
+    }
+
+    const particleCount = 50 * (timeLeft / duration)
+    // since particles fall down, start a bit higher than random
+    confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } })
+    confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } })
+  }, 250)
+  
+  // Also do a quick burst at the center
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { y: 0.6 }
+  })
+}
 
 const handleNotify = () => {
   try {
@@ -124,7 +154,10 @@ useHead({
       <main class="container mx-auto px-4 md:px-6 py-4 md:py-8 relative z-10 max-w-6xl pb-24 md:pb-8">
         <!-- Desktop Navbar -->
         <nav class="hidden md:flex justify-between items-center mb-20 cartoon-box p-4 bg-white sticky top-4 z-50">
-          <h1 class="text-xl md:text-2xl font-black cartoon-title bg-pop-yellow border-2 border-black shadow-hover px-3 py-1 -rotate-2">
+          <h1 
+            @click="triggerCelebration" 
+            class="text-xl md:text-2xl font-black cartoon-title bg-pop-yellow border-2 border-black shadow-hover px-3 py-1 -rotate-2 cursor-pointer active:scale-95 transition-transform select-none"
+          >
               DEV_FOLIO
           </h1>
           <div class="flex gap-6 font-bold text-sm">
@@ -147,7 +180,10 @@ useHead({
           </a>
           
           <!-- DEV_FOLIO Logo in Center -->
-          <div class="flex flex-col items-center justify-center px-2 flex-1">
+          <div 
+             @click="triggerCelebration"
+             class="flex flex-col items-center justify-center px-2 flex-1 cursor-pointer active:scale-95 transition-transform select-none"
+          >
             <div class="text-xs font-black cartoon-title bg-pop-yellow border-2 border-black shadow-hover px-2 py-0.5 -rotate-2 whitespace-nowrap">
               DEV_FOLIO
             </div>
