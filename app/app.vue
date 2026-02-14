@@ -87,13 +87,12 @@ const handleNotify = () => {
           </p>
           
           <div class="flex flex-col md:flex-row gap-3 md:gap-4 animate-enter delay-300 w-full md:w-auto px-4">
-            <UButton 
-              size="xl"
-              class="rounded-xl border-3 border-black bg-pop-yellow text-black font-black text-base md:text-lg px-6 md:px-8 py-3 shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all transform hover:rotate-1 w-full md:w-auto justify-center"
-              to="#experience"
+            <a 
+              href="#experience"
+              class="inline-flex items-center justify-center rounded-xl border-3 border-black bg-pop-yellow text-black font-black text-base md:text-lg px-6 md:px-8 py-3 shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all transform hover:rotate-1 w-full md:w-auto"
             >
               VIEW MY QUESTS <UIcon name="i-heroicons-arrow-down-circle-solid" class="w-5 h-5 md:w-6 md:h-6 ml-2" />
-            </UButton>
+            </a>
              <UTooltip text="Check my Repos">
                <UButton 
                 size="xl"
