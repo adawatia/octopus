@@ -13,6 +13,5 @@ export default defineNuxtConfig({
   },
   
   // Enable static site generation
-  ssr: false,
-  target: 'static'
+  ssr: false
 })
