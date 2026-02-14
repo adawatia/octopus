@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+const basePath = process.env.NODE_ENV === 'production' ? '/octopus/' : '/'
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
@@ -8,7 +10,7 @@ export default defineNuxtConfig({
   
   // GitHub Pages configuration
   app: {
-    baseURL: process.env.NODE_ENV === 'production' ? '/octopus/' : '/',
+    baseURL: basePath,
     buildAssetsDir: 'assets',
     head: {
       htmlAttrs: {
@@ -55,7 +57,11 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'canonical', href: 'https://adawatia.github.io/octopus/' },
-        { rel: 'icon', type: 'image/x-icon', href: '/octopus/favicon.ico' },
+        { rel: 'icon', type: 'image/x-icon', href: `${basePath}favicon.ico` },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: `${basePath}apple-touch-icon.png` },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: `${basePath}favicon-32x32.png` },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: `${basePath}favicon-16x16.png` },
+        { rel: 'manifest', href: `${basePath}site.webmanifest` }
       ]
     }
   },
