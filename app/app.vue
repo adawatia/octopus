@@ -6,10 +6,23 @@ const config = useRuntimeConfig()
 const resumeLink = `${config.app.baseURL}resume.pdf`
 
 const confettiInterval = ref<any>(null)
+const celebrationSound = ref<HTMLAudioElement | null>(null)
 
 const triggerCelebration = () => {
   if (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     return
+  }
+  
+  // Play joyous sound
+  try {
+    if (!celebrationSound.value) {
+      celebrationSound.value = new Audio('/celebration.mp3')
+      celebrationSound.value.volume = 0.5 // Not too loud
+    }
+    celebrationSound.value.currentTime = 0
+    celebrationSound.value.play().catch(e => console.log('Audio play failed:', e))
+  } catch (e) {
+    console.log('Audio setup failed:', e)
   }
   
   const duration = 3 * 1000
