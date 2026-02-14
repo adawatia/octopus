@@ -595,7 +595,7 @@ useHead({
               <div class="max-w-4xl mx-auto">
                   <h2 class="text-3xl md:text-5xl font-black cartoon-title mb-6 md:mb-8">WANNA COLLAB?</h2>
                   <p class="mb-6 md:mb-10 text-lg md:text-xl font-medium px-4">Have a cool idea? Let's make it happen!</p>
-                  <a href="mailto:dv.adawatia@gmail.com" class="inline-block text-lg md:text-3xl font-black bg-white border-[3px] border-black shadow-[6px_6px_0px_0px_#000] px-4 md:px-8 py-3 md:py-4 hover:bg-pop-yellow hover:scale-105 transition-all transform rotate-2 hover:rotate-0 rounded-2xl break-all">
+                  <a href="mailto:dv.adawatia@gmail.com" class="inline-block text-lg md:text-3xl font-black bg-white border-[3px] border-black shadow-[6px_6px_0px_0px_#000] px-4 md:px-8 py-3 md:py-4 hover:bg-pop-yellow hover:scale-105 transition-all transform md:rotate-2 hover:rotate-0 rounded-2xl break-all">
                       dv.adawatia@gmail.com
                   </a>
                   <div class="mt-6 md:mt-8 text-base md:text-xl font-bold flex flex-col gap-2">
