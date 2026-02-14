@@ -500,9 +500,28 @@ useHead({
                       <span>+91-8437330408</span>
                   </div>
                   
-                   <div class="mt-12 md:mt-16 flex flex-col md:flex-row justify-center gap-4 md:gap-8 opacity-70 font-mono text-xs md:text-sm">
-                      <span>© 2026 Adawatia</span>
-                      <span>Built with Nuxt 4 & Fun</span>
+                  <div class="mt-12 md:mt-16 flex flex-col items-center gap-6 opacity-70 font-mono text-xs md:text-sm">
+                      <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-8">
+                          <span>© 2026 Adawatia</span>
+                          <span>Built with Nuxt 4 & Fun</span>
+                      </div>
+                      <div class="flex flex-row justify-center gap-8 grayscale hover:grayscale-0 transition-all duration-300">
+                          <UTooltip text="Chat on WhatsApp">
+                              <a href="https://wa.me/918437330408" target="_blank" rel="noopener noreferrer" class="block hover:scale-125 transition-transform">
+                                  <UIcon name="i-logos-whatsapp-icon" class="w-6 h-6" />
+                              </a>
+                          </UTooltip>
+                          <UTooltip text="Connect on LinkedIn">
+                              <a href="https://linkedin.com/in/adawatia" target="_blank" rel="noopener noreferrer" class="block hover:scale-125 transition-transform">
+                                  <UIcon name="i-logos-linkedin-icon" class="w-6 h-6" />
+                              </a>
+                          </UTooltip>
+                           <UTooltip text="View Source Code">
+                              <a href="https://github.com/adawatia/octopus" target="_blank" rel="noopener noreferrer" class="block hover:scale-125 transition-transform">
+                                  <UIcon name="i-heroicons-code-bracket-square-solid" class="w-6 h-6 text-pop-purple" />
+                              </a>
+                          </UTooltip>
+                      </div>
                   </div>
               </div>
          </footer>
