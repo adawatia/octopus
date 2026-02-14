@@ -74,20 +74,28 @@ bun run preview
 
 ## GitHub Pages Deployment
 
-This site is configured for automatic deployment to GitHub Pages. 
+This site is configured for automatic deployment to GitHub Pages using the `gh-pages` branch.
 
 ### Initial Setup (One-time)
 
 1. Go to your GitHub repository: https://github.com/adawatia/octopus
 2. Click on **Settings** → **Pages** (in the left sidebar)
-3. Under **Source**, select **GitHub Actions**
-4. The site will automatically deploy on every push to the `main` branch
+3. Under **Source**, select **Deploy from a branch**
+4. Under **Branch**, select **gh-pages** and **/ (root)**, then click **Save**
+5. The site will automatically deploy on every push to the `main` branch
+
+### How It Works
+
+- **Source Code**: Your source code stays in the `main` branch (clean and organized)
+- **Built Files**: The GitHub Actions workflow builds your site and pushes the static files to the `gh-pages` branch
+- **Deployment**: GitHub Pages serves the site from the `gh-pages` branch
 
 ### Deployment
 
 The site automatically deploys when you push to the `main` branch. The GitHub Actions workflow will:
 - Build the static site using `npm run generate`
-- Deploy to GitHub Pages
+- Push the built files to the `gh-pages` branch
+- GitHub Pages automatically deploys from `gh-pages`
 
 Your site will be available at: **https://adawatia.github.io/octopus/**
 
@@ -99,4 +107,5 @@ You can also trigger a manual deployment:
 3. Click **Run workflow** → **Run workflow**
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
 
