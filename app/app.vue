@@ -208,6 +208,8 @@ useHead({
                 to="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
+                download="Devansh-Sharma-Resume.pdf"
+                external
               >
                 RESUME <UIcon name="i-heroicons-document-arrow-down-solid" class="w-4 h-4 md:w-5 md:h-5 ml-2" />
               </UButton>
@@ -552,7 +554,7 @@ useHead({
                               </a>
                           </UTooltip>
                            <UTooltip text="Download Resume">
-                              <a href="/resume.pdf" download="Devansh_Sharma_Resume.pdf" class="block hover:scale-125 transition-transform">
+                              <a href="/resume.pdf" download="Devansh-Sharma-Resume.pdf" class="block hover:scale-125 transition-transform">
                                   <UIcon name="i-heroicons-document-arrow-down-solid" class="w-6 h-6 text-pop-pink" />
                               </a>
                           </UTooltip>
