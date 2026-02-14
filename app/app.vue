@@ -200,6 +200,18 @@ useHead({
                 GITHUB <UIcon name="i-logos-github-icon" class="w-4 h-4 md:w-5 md:h-5 ml-2" />
               </UButton>
             </UTooltip>
+             <UTooltip text="Download Resume">
+               <UButton 
+                size="xl"
+                variant="ghost"
+                class="rounded-xl border-3 border-black bg-pop-cyan text-black font-bold text-base md:text-lg px-6 md:px-8 py-3 shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all w-full md:w-auto justify-center"
+                to="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                RESUME <UIcon name="i-heroicons-document-arrow-down-solid" class="w-4 h-4 md:w-5 md:h-5 ml-2" />
+              </UButton>
+            </UTooltip>
           </div>
         </header>
 
@@ -302,6 +314,24 @@ useHead({
                        </UTooltip>
                        <UTooltip text="Image Processing & CNNs">
                          <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-pink/20 cursor-default transition-colors">Computer Vision</span>
+                       </UTooltip>
+                       <UTooltip text="Network Security & Protocols">
+                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-pink/20 cursor-default transition-colors">Computer Networks</span>
+                       </UTooltip>
+                       <UTooltip text="Hadoop, Spark & Data Mining">
+                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-purple/20 cursor-default transition-colors">Big Data Analytics</span>
+                       </UTooltip>
+                       <UTooltip text="Visual Analytics & Dashboards">
+                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-cyan/20 cursor-default transition-colors">Data Visualization</span>
+                       </UTooltip>
+                       <UTooltip text="Database Management Systems">
+                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-yellow/20 cursor-default transition-colors">DBMS</span>
+                       </UTooltip>
+                       <UTooltip text="Computer Organization & Architecture">
+                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-pink/20 cursor-default transition-colors">Computer Architecture</span>
+                       </UTooltip>
+                       <UTooltip text="OS Internals & Virtualization">
+                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-orange/20 cursor-default transition-colors">Operating System</span>
                        </UTooltip>
                      </div>
                   </div>
@@ -519,6 +549,11 @@ useHead({
                            <UTooltip text="View Source Code">
                               <a href="https://github.com/adawatia/octopus" target="_blank" rel="noopener noreferrer" class="block hover:scale-125 transition-transform">
                                   <UIcon name="i-heroicons-code-bracket-square-solid" class="w-6 h-6 text-pop-purple" />
+                              </a>
+                          </UTooltip>
+                           <UTooltip text="Download Resume">
+                              <a href="/resume.pdf" download="Devansh_Sharma_Resume.pdf" class="block hover:scale-125 transition-transform">
+                                  <UIcon name="i-heroicons-document-arrow-down-solid" class="w-6 h-6 text-pop-pink" />
                               </a>
                           </UTooltip>
                       </div>

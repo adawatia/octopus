@@ -1,6 +1,6 @@
 <template>
   <div class="cartoon-box p-6 relative group hover:bg-pop-cyan/5">
-    <div class="absolute -top-3 -right-3 bg-pop-yellow border-2 border-black px-3 py-1 font-black text-sm transform rotate-3 shadow-[2px_2px_0px_0px_#000]">
+    <div class="absolute -top-3 -right-3 bg-pop-yellow border-2 border-black px-3 py-1 font-black text-sm transform rotate-3 shadow-hover">
       {{ period }}
     </div>
     
