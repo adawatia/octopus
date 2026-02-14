@@ -1,5 +1,5 @@
 <template>
-  <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border-2 border-black bg-white shadow-hover hover:-translate-y-1 hover:shadow-hard transition-all duration-200 cursor-default select-none">
+  <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border-2 border-black shadow-hover hover:-translate-y-1 hover:shadow-hard transition-all duration-200 cursor-default select-none">
     <img 
       v-if="isValidUrl(icon)" 
       :src="icon" 

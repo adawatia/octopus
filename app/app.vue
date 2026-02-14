@@ -122,7 +122,7 @@ useHead({
       <main class="container mx-auto px-4 md:px-6 py-4 md:py-8 relative z-10 max-w-6xl pb-24 md:pb-8">
         <!-- Desktop Navbar -->
         <nav class="hidden md:flex justify-between items-center mb-20 cartoon-box p-4 bg-white sticky top-4 z-50">
-          <h1 class="text-xl md:text-2xl font-black cartoon-title bg-pop-yellow border-2 border-black shadow-[2px_2px_0px_0px_#000] px-3 py-1 -rotate-2">
+          <h1 class="text-xl md:text-2xl font-black cartoon-title bg-pop-yellow border-2 border-black shadow-hover px-3 py-1 -rotate-2">
               DEV_FOLIO
           </h1>
           <div class="flex gap-6 font-bold text-sm">
@@ -146,7 +146,7 @@ useHead({
           
           <!-- DEV_FOLIO Logo in Center -->
           <div class="flex flex-col items-center justify-center px-2 flex-1">
-            <div class="text-xs font-black cartoon-title bg-pop-yellow border-2 border-black shadow-[2px_2px_0px_0px_#000] px-2 py-0.5 -rotate-2 whitespace-nowrap">
+            <div class="text-xs font-black cartoon-title bg-pop-yellow border-2 border-black shadow-hover px-2 py-0.5 -rotate-2 whitespace-nowrap">
               DEV_FOLIO
             </div>
           </div>
@@ -163,10 +163,10 @@ useHead({
 
         <!-- Hero Section -->
         <header class="min-h-[50vh] md:min-h-[60vh] flex flex-col justify-center items-center text-center mb-16 md:mb-32 relative px-2 mt-12 md:mt-0">
-          <div class="absolute top-10 left-10 w-16 h-16 bg-pop-purple rounded-full border-3 border-black shadow-[4px_4px_0px_0px_#000] animate-bounce delay-75 hidden lg:block opacity-20"></div>
-          <div class="absolute bottom-20 right-20 w-12 h-12 bg-pop-orange rotate-12 border-3 border-black shadow-[4px_4px_0px_0px_#000] animate-pulse hidden lg:block opacity-20"></div>
+          <div class="absolute top-10 left-10 w-16 h-16 bg-pop-purple rounded-full border-3 border-black shadow-hard animate-bounce delay-75 hidden lg:block opacity-20"></div>
+          <div class="absolute bottom-20 right-20 w-12 h-12 bg-pop-orange rotate-12 border-3 border-black shadow-hard animate-pulse hidden lg:block opacity-20"></div>
 
-          <div class="inline-flex items-center gap-2 px-3 md:px-4 py-2 bg-pop-orange border-3 border-black shadow-[4px_4px_0px_0px_#000] text-white rounded-full mb-6 md:mb-8 font-bold transform -rotate-3 hover:rotate-0 transition-transform cursor-default animate-enter text-xs md:text-base">
+          <div class="inline-flex items-center gap-2 px-3 md:px-4 py-2 bg-pop-orange border-3 border-black shadow-hard text-white rounded-full mb-6 md:mb-8 font-bold transform -rotate-3 hover:rotate-0 transition-transform cursor-default animate-enter text-xs md:text-base">
             <UIcon name="i-heroicons-hand-raised-solid" class="w-4 h-4 md:w-5 md:h-5 text-yellow-300" /> HELLO WORLD! I'M DEVANSH SHARMA
           </div>
           
@@ -184,15 +184,15 @@ useHead({
             <a 
               @click.prevent="scrollToSection('experience')"
               href="#experience"
-              class="inline-flex items-center justify-center rounded-xl border-3 border-black bg-pop-yellow text-black font-black text-base md:text-lg px-6 md:px-8 py-3 shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all transform hover:rotate-1 w-full md:w-auto cursor-pointer"
+              class="inline-flex items-center justify-center rounded-xl border-3 border-black bg-pop-yellow text-black font-black text-base md:text-lg px-6 md:px-8 py-3 shadow-hard hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all transform hover:rotate-1 w-full md:w-auto cursor-pointer"
             >
               VIEW MY QUESTS <UIcon name="i-heroicons-arrow-down-circle-solid" class="w-5 h-5 md:w-6 md:h-6 ml-2" />
             </a>
-             <UTooltip text="Check my Repos">
+             <UTooltip ignore-non-keyboard-focus text="Check my Repos">
                <UButton 
                 size="xl"
                 variant="ghost"
-                class="rounded-xl border-3 border-black bg-white text-black font-bold text-base md:text-lg px-6 md:px-8 py-3 shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all w-full md:w-auto justify-center"
+                class="rounded-xl border-3 border-black bg-white text-black font-bold text-base md:text-lg px-6 md:px-8 py-3 shadow-hard hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all w-full md:w-auto justify-center"
                 to="https://github.com/adawatia"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -200,11 +200,11 @@ useHead({
                 GITHUB <UIcon name="i-logos-github-icon" class="w-4 h-4 md:w-5 md:h-5 ml-2" />
               </UButton>
             </UTooltip>
-             <UTooltip text="Download Resume">
+             <UTooltip ignore-non-keyboard-focus text="Download Resume">
                <UButton 
                 size="xl"
                 variant="ghost"
-                class="rounded-xl border-3 border-black bg-pop-cyan text-black font-bold text-base md:text-lg px-6 md:px-8 py-3 shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all w-full md:w-auto justify-center"
+                class="rounded-xl border-3 border-black bg-pop-cyan text-black font-bold text-base md:text-lg px-6 md:px-8 py-3 shadow-hard hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all w-full md:w-auto justify-center"
                 to="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -221,18 +221,18 @@ useHead({
         <section id="about" class="mb-16 md:mb-32 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
           <div class="cartoon-box p-6 md:p-8 bg-white rotate-1">
             <h3 class="text-2xl md:text-3xl font-black cartoon-title mb-4 md:mb-6 flex items-center gap-3 md:gap-4">
-              <div class="w-12 h-12 bg-pop-purple rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white">
+              <div class="w-12 h-12 bg-pop-purple rounded-lg border-3 border-black shadow-hard flex items-center justify-center text-white">
                 <UIcon name="i-heroicons-user-circle-solid" class="w-6 h-6" />
               </div>
               ABOUT ME
             </h3>
             <p class="text-lg leading-loose font-medium text-gray-800 mb-6">
               I am a <span class="font-bold text-pop-purple">Backend Developer</span> specializing in scalable API architecture and cloud infrastructure. Check out my work on 
-              <UTooltip text="Check my code">
+              <UTooltip ignore-non-keyboard-focus text="Check my code">
                 <a href="https://github.com/adawatia" class="underline decoration-pop-cyan decoration-4" target="_blank" rel="noopener noreferrer">GitHub</a>
               </UTooltip>
                or connect with me on 
-              <UTooltip text="Let's connect!">
+              <UTooltip ignore-non-keyboard-focus text="Let's connect!">
                 <a href="https://linkedin.com/in/adawatia" class="underline decoration-pop-pink decoration-4" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               </UTooltip>.
             </p>
@@ -240,17 +240,17 @@ useHead({
               Proficient in Python (FastAPI, Django) and orchestrating containerized workloads on AWS and GCP. Experienced in engineering robust server-side solutions and integrating production-grade AI pipelines.
             </p>
             <div class="flex flex-wrap gap-2 mt-4">
-               <UTooltip text="Black Belt in coding?">
+               <UTooltip ignore-non-keyboard-focus text="Black Belt in coding?">
                  <span class="px-3 py-1 bg-gray-100 border border-black rounded font-bold text-sm cursor-default flex items-center gap-1">
                    <UIcon name="i-fluent-emoji-martial-arts-uniform" class="w-4 h-4" /> Karate
                  </span>
                </UTooltip>
-               <UTooltip text="Knowledge sponge">
+               <UTooltip ignore-non-keyboard-focus text="Knowledge sponge">
                  <span class="px-3 py-1 bg-gray-100 border border-black rounded font-bold text-sm cursor-default flex items-center gap-1">
                    <UIcon name="i-fluent-emoji-open-book" class="w-4 h-4" /> Reading
                  </span>
                </UTooltip>
-               <UTooltip text="I use Linux Mint btw">
+               <UTooltip ignore-non-keyboard-focus text="I use Linux Mint btw">
                  <span class="px-3 py-1 bg-gray-100 border border-black rounded font-bold text-sm cursor-default flex items-center gap-1">
                    <UIcon name="i-logos-linux-tux" class="w-4 h-4" /> Linux
                  </span>
@@ -262,7 +262,7 @@ useHead({
             <!-- Tech Stack -->
             <div class="mb-8 md:mb-12">
               <h3 class="text-2xl md:text-3xl font-black cartoon-title mb-4 md:mb-6 transform -rotate-1 flex items-center gap-3 md:gap-4">
-                <div class="w-12 h-12 bg-pop-orange rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white">
+                <div class="w-12 h-12 bg-pop-orange rounded-lg border-3 border-black shadow-hard flex items-center justify-center text-white">
                   <UIcon name="i-heroicons-wrench-screwdriver-solid" class="w-6 h-6" />
                 </div>
                 INVENTORY
@@ -288,7 +288,7 @@ useHead({
             <!-- Education -->
              <div class="cartoon-box p-6 bg-pop-cyan/10 border-dashed">
                <h3 class="text-2xl font-black cartoon-title mb-4 flex items-center gap-4">
-                 <div class="w-10 h-10 bg-pop-cyan rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white">
+                 <div class="w-10 h-10 bg-pop-cyan rounded-lg border-3 border-black shadow-hard flex items-center justify-center text-white">
                     <UIcon name="i-heroicons-academic-cap-solid" class="w-5 h-5" />
                  </div>
                  EDUCATION
@@ -305,34 +305,34 @@ useHead({
                   <div class="border-t border-black/10 pt-4">
                      <h4 class="font-bold text-sm mb-2 text-gray-500 uppercase tracking-wider">Relevant Loot (Coursework)</h4>
                      <div class="flex flex-wrap gap-2">
-                       <UTooltip text="Design & Analysis of Algorithms">
+                       <UTooltip ignore-non-keyboard-focus text="Design & Analysis of Algorithms">
                          <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-purple/20 cursor-default transition-colors">Algorithms</span>
                        </UTooltip>
-                       <UTooltip text="Advanced Data Structures">
+                       <UTooltip ignore-non-keyboard-focus text="Advanced Data Structures">
                          <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-cyan/20 cursor-default transition-colors">Data Structures</span>
                        </UTooltip>
-                       <UTooltip text="Deep Learning & Neural Networks">
+                       <UTooltip ignore-non-keyboard-focus text="Deep Learning & Neural Networks">
                          <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-yellow/20 cursor-default transition-colors">Machine Learning</span>
                        </UTooltip>
-                       <UTooltip text="Image Processing & CNNs">
+                       <UTooltip ignore-non-keyboard-focus text="Image Processing & CNNs">
                          <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-pink/20 cursor-default transition-colors">Computer Vision</span>
                        </UTooltip>
-                       <UTooltip text="Network Security & Protocols">
+                       <UTooltip ignore-non-keyboard-focus text="Network Security & Protocols">
                          <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-pink/20 cursor-default transition-colors">Computer Networks</span>
                        </UTooltip>
-                       <UTooltip text="Hadoop, Spark & Data Mining">
+                       <UTooltip ignore-non-keyboard-focus text="Hadoop, Spark & Data Mining">
                          <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-purple/20 cursor-default transition-colors">Big Data Analytics</span>
                        </UTooltip>
-                       <UTooltip text="Visual Analytics & Dashboards">
+                       <UTooltip ignore-non-keyboard-focus text="Visual Analytics & Dashboards">
                          <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-cyan/20 cursor-default transition-colors">Data Visualization</span>
                        </UTooltip>
-                       <UTooltip text="Database Management Systems">
+                       <UTooltip ignore-non-keyboard-focus text="Database Management Systems">
                          <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-yellow/20 cursor-default transition-colors">DBMS</span>
                        </UTooltip>
-                       <UTooltip text="Computer Organization & Architecture">
+                       <UTooltip ignore-non-keyboard-focus text="Computer Organization & Architecture">
                          <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-pink/20 cursor-default transition-colors">Computer Architecture</span>
                        </UTooltip>
-                       <UTooltip text="OS Internals & Virtualization">
+                       <UTooltip ignore-non-keyboard-focus text="OS Internals & Virtualization">
                          <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-orange/20 cursor-default transition-colors">Operating System</span>
                        </UTooltip>
                      </div>
@@ -345,7 +345,7 @@ useHead({
         <!-- Experience Log -->
         <section id="experience" class="mb-16 md:mb-32">
            <h3 class="text-3xl md:text-5xl font-black mb-8 md:mb-12 cartoon-title flex items-center gap-3 md:gap-4">
-              <div class="w-12 h-12 bg-pop-purple rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white">
+              <div class="w-12 h-12 bg-pop-purple rounded-lg border-3 border-black shadow-hard flex items-center justify-center text-white">
                 <UIcon name="i-heroicons-bolt-solid" class="w-6 h-6" />
               </div>
               QUEST LOG
@@ -396,7 +396,7 @@ useHead({
         <!-- Projects -->
         <section id="work" class="mb-16 md:mb-32">
           <h3 class="text-3xl md:text-5xl font-black mb-8 md:mb-12 cartoon-title flex items-center gap-3 md:gap-4">
-              <div class="w-12 h-12 bg-pop-cyan rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white">
+              <div class="w-12 h-12 bg-pop-cyan rounded-lg border-3 border-black shadow-hard flex items-center justify-center text-white">
                 <UIcon name="i-heroicons-rocket-launch-solid" class="w-6 h-6" />
               </div>
               SIDE MISSIONS
@@ -439,7 +439,7 @@ useHead({
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 mb-16 md:mb-32">
           <section class="lg:col-span-2">
              <h3 class="text-2xl md:text-3xl font-black cartoon-title mb-6 md:mb-8 flex items-center gap-3 md:gap-4">
-              <div class="w-12 h-12 bg-pop-cyan rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white">
+              <div class="w-12 h-12 bg-pop-cyan rounded-lg border-3 border-black shadow-hard flex items-center justify-center text-white">
                 <UIcon name="i-heroicons-document-text-solid" class="w-6 h-6" />
               </div>
               PUBLICATIONS
@@ -465,7 +465,7 @@ useHead({
 
           <section>
              <h3 class="text-2xl md:text-3xl font-black cartoon-title mb-6 md:mb-8 flex items-center gap-3 md:gap-4">
-              <div class="w-12 h-12 bg-pop-yellow rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white">
+              <div class="w-12 h-12 bg-pop-yellow rounded-lg border-3 border-black shadow-hard flex items-center justify-center text-white">
                 <UIcon name="i-heroicons-trophy-solid" class="w-6 h-6" />
               </div>
               CERTIFICATIONS
@@ -473,28 +473,28 @@ useHead({
             <div class="cartoon-box p-6 bg-pop-yellow/10">
               <ul class="space-y-4">
                   <li class="flex items-center gap-3 font-bold text-sm">
-                    <UTooltip text="Verified Credential">
+                    <UTooltip ignore-non-keyboard-focus text="Verified Credential">
                        <div class="flex items-center gap-3 cursor-default">
                          <UIcon name="i-heroicons-check-badge-solid" class="w-5 h-5 text-pop-purple" /> Summer School on AI (UUST Russia)
                        </div>
                     </UTooltip>
                 </li>
                 <li class="flex items-center gap-3 font-bold text-sm">
-                  <UTooltip text="Verified Credential">
+                  <UTooltip ignore-non-keyboard-focus text="Verified Credential">
                      <div class="flex items-center gap-3 cursor-default">
                        <UIcon name="i-heroicons-check-badge-solid" class="w-5 h-5 text-pop-purple" /> AWS Cloud Architecting (AWS Academy)
                      </div>
                   </UTooltip>
                 </li>
                 <li class="flex items-center gap-3 font-bold text-sm">
-                  <UTooltip text="Verified Credential">
+                  <UTooltip ignore-non-keyboard-focus text="Verified Credential">
                      <div class="flex items-center gap-3 cursor-default">
                        <UIcon name="i-heroicons-check-badge-solid" class="w-5 h-5 text-pop-purple" /> ROBO AI Diamond Cert
                      </div>
                   </UTooltip>
                 </li>
                 <li class="flex items-center gap-3 font-bold text-sm">
-                   <UTooltip text="Verified Credential">
+                   <UTooltip ignore-non-keyboard-focus text="Verified Credential">
                      <div class="flex items-center gap-3 cursor-default">
                        <UIcon name="i-heroicons-check-badge-solid" class="w-5 h-5 text-pop-purple" /> Data Science using R (Chandigarh Univ)
                      </div>
@@ -508,7 +508,7 @@ useHead({
          <!-- Blog -->
          <section id="blog" class="mb-16 md:mb-32">
             <h3 class="text-3xl md:text-4xl font-black cartoon-title mb-6 md:mb-10 flex items-center gap-3 md:gap-4">
-               <div class="w-12 h-12 bg-pop-pink rounded-lg border-3 border-black shadow-[4px_4px_0px_0px_#000] flex items-center justify-center text-white">
+               <div class="w-12 h-12 bg-pop-pink rounded-lg border-3 border-black shadow-hard flex items-center justify-center text-white">
                   <UIcon name="i-heroicons-pencil-square-solid" class="w-6 h-6" />
                 </div>
               LATEST LOGS
@@ -538,22 +538,22 @@ useHead({
                           <span>Built with Nuxt 4 & Fun</span>
                       </div>
                       <div class="flex flex-row justify-center gap-8 grayscale hover:grayscale-0 transition-all duration-300">
-                          <UTooltip text="Chat on WhatsApp">
+                          <UTooltip ignore-non-keyboard-focus text="Chat on WhatsApp">
                               <a href="https://wa.me/918437330408" target="_blank" rel="noopener noreferrer" class="block hover:scale-125 transition-transform">
                                   <UIcon name="i-logos-whatsapp-icon" class="w-6 h-6" />
                               </a>
                           </UTooltip>
-                          <UTooltip text="Connect on LinkedIn">
+                          <UTooltip ignore-non-keyboard-focus text="Connect on LinkedIn">
                               <a href="https://linkedin.com/in/adawatia" target="_blank" rel="noopener noreferrer" class="block hover:scale-125 transition-transform">
                                   <UIcon name="i-logos-linkedin-icon" class="w-6 h-6" />
                               </a>
                           </UTooltip>
-                           <UTooltip text="View Source Code">
+                           <UTooltip ignore-non-keyboard-focus text="View Source Code">
                               <a href="https://github.com/adawatia/octopus" target="_blank" rel="noopener noreferrer" class="block hover:scale-125 transition-transform">
                                   <UIcon name="i-heroicons-code-bracket-square-solid" class="w-6 h-6 text-pop-purple" />
                               </a>
                           </UTooltip>
-                           <UTooltip text="Download Resume">
+                           <UTooltip ignore-non-keyboard-focus text="Download Resume">
                               <a href="/resume.pdf" download="Devansh-Sharma-Resume.pdf" class="block hover:scale-125 transition-transform">
                                   <UIcon name="i-heroicons-document-arrow-down-solid" class="w-6 h-6 text-pop-pink" />
                               </a>
