@@ -16,7 +16,7 @@ const triggerCelebration = () => {
   // Play joyous sound
   try {
     if (!celebrationSound.value) {
-      celebrationSound.value = new Audio('/celebration.mp3')
+      celebrationSound.value = new Audio(`${config.app.baseURL}celebration.mp3`)
       celebrationSound.value.volume = 0.5 // Not too loud
     }
     celebrationSound.value.currentTime = 0
