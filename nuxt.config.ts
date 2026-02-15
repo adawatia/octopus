@@ -114,6 +114,9 @@ export default defineNuxtConfig({
   nitro: {
     compressPublicAssets: true, // Enable gzip/brotli
     minify: true,
+    prerender: {
+      routes: ['/']
+    }
   },
   
   // Experimental Features
@@ -122,5 +125,14 @@ export default defineNuxtConfig({
   },
   
   // Enable static site generation
-  ssr: false
+  ssr: false,
+  
+  // Prerender the home page for better SEO
+  nitro: {
+    compressPublicAssets: true, // Enable gzip/brotli
+    minify: true,
+    prerender: {
+      routes: ['/']
+    }
+  },
 })
