@@ -34,10 +34,10 @@ const updatePosition = (e) => {
     
     // Optimized element check using matches API
     const target = e.target
-    if (target) {
+    if (target && target instanceof Element) {
       // More efficient check using matches() instead of multiple closests()
-      isHovering.value = target?.matches?.('a, button, [role="button"]') || 
-                         target?.closest?.('a, button, [role="button"]') !== null
+      isHovering.value = target.matches('a, button, [role="button"]') || 
+                         (target.closest && target.closest('a, button, [role="button"]') !== null)
     } else {
       isHovering.value = false
     }

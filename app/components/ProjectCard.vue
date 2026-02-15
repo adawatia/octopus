@@ -53,7 +53,9 @@ const isValidLink = computed(() => {
   if (!props.link || props.link === '#') return false
   
   try {
-    const url = new URL(props.link, window.location.origin)
+    // Use a dummy base to allow validation of relative URLs on both client and server
+    const base = typeof window !== 'undefined' ? window.location.origin : 'http://example.com'
+    const url = new URL(props.link, base)
     return url.protocol === 'http:' || url.protocol === 'https:'
   } catch {
     return false

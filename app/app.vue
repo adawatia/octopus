@@ -176,7 +176,6 @@ onMounted(() => {
         </nav>
 
         <!-- Lazy Loaded Sections -->
-        <ClientOnly>
           <HeroSection @celebrate="triggerCelebration" />
           <LazyAboutSection />
           <LazyExperienceSection />
@@ -184,7 +183,6 @@ onMounted(() => {
           <LazyPublicationsSection />
           <LazyBlogSection />
           <LazyFooterSection />
-        </ClientOnly>
 
       </main>
     </div>
