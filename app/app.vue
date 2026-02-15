@@ -1,5 +1,14 @@
 <script setup lang="ts">
 import confetti from 'canvas-confetti'
+import { 
+  techStack, 
+  education, 
+  experience, 
+  projects, 
+  publications, 
+  certifications, 
+  seoData 
+} from '~/data'
 
 const toast = useToast()
 const config = useRuntimeConfig()
@@ -90,86 +99,7 @@ const scrollToSection = (sectionId: string) => {
 
 // SEO: Structured Data (JSON-LD) for rich search results
 useHead({
-  script: [
-    {
-      type: 'application/ld+json',
-      children: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'Person',
-        name: 'Devansh Sharma',
-        alternateName: 'adawatia',
-        url: 'https://adawatia.github.io/octopus/',
-        image: 'https://github.com/adawatia.png',
-        sameAs: [
-          'https://github.com/adawatia',
-          'https://linkedin.com/in/adawatia'
-        ],
-        jobTitle: 'AI Backend Engineer',
-        worksFor: {
-          '@type': 'Organization',
-          name: 'Zryth Solutions'
-        },
-        alumniOf: [
-          {
-            '@type': 'CollegeOrUniversity',
-            name: 'Chandigarh University'
-          },
-          {
-            '@type': 'CollegeOrUniversity',
-            name: 'IIT Guwahati'
-          }
-        ],
-        knowsAbout: [
-          'FastAPI',
-          'Django',
-          'Python',
-          'AWS',
-          'GCP',
-          'Docker',
-          'Machine Learning',
-          'Cloud Architecture',
-          'Backend Development',
-          'API Design'
-        ],
-        email: 'dv.adawatia@gmail.com',
-        telephone: '+91-8437330408'
-      })
-    },
-    {
-      type: 'application/ld+json',
-      children: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'WebSite',
-        name: 'Devansh Sharma Portfolio',
-        alternateName: 'adawatia Portfolio',
-        url: 'https://adawatia.github.io/octopus/',
-        description: 'AI Backend Engineer specializing in FastAPI, Django, AWS, and scalable cloud architecture',
-        author: {
-          '@type': 'Person',
-          name: 'Devansh Sharma',
-          alternateName: 'adawatia'
-        }
-      })
-    },
-    {
-      type: 'application/ld+json',
-      children: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'ProfilePage',
-        mainEntity: {
-          '@type': 'Person',
-          name: 'Devansh Sharma',
-          alternateName: 'adawatia',
-          description: 'AI Backend Engineer specializing in scalable API architecture, cloud infrastructure, and production-grade AI pipelines',
-          hasOccupation: {
-            '@type': 'Occupation',
-            name: 'AI Backend Engineer',
-            skills: 'FastAPI, Django, Python, AWS, GCP, Docker, Kubernetes, PostgreSQL, MongoDB, Machine Learning, LangChain'
-          }
-        }
-      })
-    }
-  ]
+  script: seoData
 })
 </script>
 
@@ -338,20 +268,13 @@ useHead({
                 INVENTORY
               </h3>
               <div class="flex flex-wrap gap-3">
-                <TechPill name="Python" icon="i-logos-python" class="bg-blue-50" />
-                <TechPill name="FastAPI" icon="i-logos-fastapi-icon" class="bg-teal-50" />
-                <TechPill name="Django" icon="i-logos-django-icon" class="bg-green-50" />
-                <TechPill name="C++" icon="i-logos-c-plusplus" class="bg-blue-50" />
-                <TechPill name="AWS" icon="i-logos-aws" class="bg-yellow-50" />
-                <TechPill name="GCP" icon="i-logos-google-cloud" class="bg-red-50" />
-                <TechPill name="Docker" icon="i-logos-docker-icon" class="bg-blue-50" />
-                <TechPill name="Linux" icon="i-logos-linux-tux" class="bg-gray-50" />
-                <TechPill name="PostgreSQL" icon="i-logos-postgresql" class="bg-blue-50" />
-                <TechPill name="MongoDB" icon="i-logos-mongodb-icon" class="bg-green-50" />
-                <TechPill name="ImageKit" icon="https://cdn.brandfetch.io/id8c1BII23/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1712150692788" class="bg-blue-50" />
-                <TechPill name="LangChain" icon="i-heroicons-link-solid" class="bg-green-50" />
-                <TechPill name="React" icon="i-logos-react" class="bg-cyan-50" />
-                <TechPill name="Streamlit" icon="https://cdn.brandfetch.io/idiyFucwEQ/theme/dark/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1668515715588" class="bg-red-50" />
+                <TechPill 
+                  v-for="tech in techStack" 
+                  :key="tech.name"
+                  :name="tech.name" 
+                  :icon="tech.icon" 
+                  :class="tech.class" 
+                />
               </div>
             </div>
             
@@ -366,44 +289,17 @@ useHead({
                <div class="space-y-6">
                   <div>
                     <div class="flex justify-between items-start gap-2">
-                      <h4 class="font-bold text-lg">B.E. Computer Science</h4>
-                      <span class="text-sm font-bold bg-white border border-black px-2 rounded whitespace-nowrap shrink-0">2021-2025</span>
+                      <h4 class="font-bold text-lg">{{ education.degree }}</h4>
+                      <span class="text-sm font-bold bg-white border border-black px-2 rounded whitespace-nowrap shrink-0">{{ education.period }}</span>
                     </div>
-                    <div class="text-gray-600 font-medium">Chandigarh University</div>
-                    <div class="text-sm font-bold text-pop-purple mt-1">CGPA: 7.79</div>
+                    <div class="text-gray-600 font-medium">{{ education.institution }}</div>
+                    <div class="text-sm font-bold text-pop-purple mt-1">{{ education.gpa }}</div>
                   </div>
                   <div class="border-t border-black/10 pt-4">
                      <h4 class="font-bold text-sm mb-2 text-gray-500 uppercase tracking-wider">Relevant Loot (Coursework)</h4>
                      <div class="flex flex-wrap gap-2">
-                       <UTooltip ignore-non-keyboard-focus text="Design & Analysis of Algorithms">
-                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-purple/20 cursor-default transition-colors">Algorithms</span>
-                       </UTooltip>
-                       <UTooltip ignore-non-keyboard-focus text="Advanced Data Structures">
-                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-cyan/20 cursor-default transition-colors">Data Structures</span>
-                       </UTooltip>
-                       <UTooltip ignore-non-keyboard-focus text="Deep Learning & Neural Networks">
-                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-yellow/20 cursor-default transition-colors">Machine Learning</span>
-                       </UTooltip>
-                       <UTooltip ignore-non-keyboard-focus text="Image Processing & CNNs">
-                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-pink/20 cursor-default transition-colors">Computer Vision</span>
-                       </UTooltip>
-                       <UTooltip ignore-non-keyboard-focus text="Network Security & Protocols">
-                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-pink/20 cursor-default transition-colors">Computer Networks</span>
-                       </UTooltip>
-                       <UTooltip ignore-non-keyboard-focus text="Hadoop, Spark & Data Mining">
-                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-purple/20 cursor-default transition-colors">Big Data Analytics</span>
-                       </UTooltip>
-                       <UTooltip ignore-non-keyboard-focus text="Visual Analytics & Dashboards">
-                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-cyan/20 cursor-default transition-colors">Data Visualization</span>
-                       </UTooltip>
-                       <UTooltip ignore-non-keyboard-focus text="Database Management Systems">
-                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-yellow/20 cursor-default transition-colors">DBMS</span>
-                       </UTooltip>
-                       <UTooltip ignore-non-keyboard-focus text="Computer Organization & Architecture">
-                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-pink/20 cursor-default transition-colors">Computer Architecture</span>
-                       </UTooltip>
-                       <UTooltip ignore-non-keyboard-focus text="OS Internals & Virtualization">
-                         <span class="text-xs bg-white px-2 py-1 rounded border border-black/20 hover:bg-pop-orange/20 cursor-default transition-colors">Operating System</span>
+                       <UTooltip v-for="course in education.coursework" :key="course.name" ignore-non-keyboard-focus :text="course.tooltip">
+                         <span :class="['text-xs bg-white px-2 py-1 rounded border border-black/20 cursor-default transition-colors', course.class]">{{ course.name }}</span>
                        </UTooltip>
                      </div>
                   </div>
@@ -422,44 +318,10 @@ useHead({
           </h3>
           <div class="space-y-8">
              <ExperienceCard 
-               role="Artificial Intelligence Engineer Intern"
-               company="Zryth Solutions"
-               period="Oct 2025 – Present"
-               description="Designed robust backend services and orchestrated scalable AI workloads on AWS."
-               :achievements="[
-                 'Designed robust backend services using FastAPI and Django',
-                 'Orchestrated AI workloads on AWS (Fargate, Step Functions, Lambda)',
-                 'Containerized applications using Docker'
-               ]"
-               :tags="['FastAPI', 'Fargate', 'Lambda', 'Docker']"
-               link="https://www.zryth.com/"
+               v-for="(exp, index) in experience"
+               :key="index"
+               v-bind="exp"
              />
-              <ExperienceCard 
-                role="Mentee (ML Engineering)"
-                company="GrowthPurple Technologies"
-                period="June 2023 – October 2023"
-                description="Engaged in a focused mentorship experience, actively participating in the development of a PDF chatbot using LLMs, Streamlit, and LangChain for real-time document interaction."
-                :achievements="[
-                  '90% accuracy on complex PDF formats',
-                  'Integrated RAG for better context retrieval',
-                  'Reduced support tickets by 35%'
-                ]"
-                :tags="['Python', 'Streamlit', 'LangChain', 'Hugging Face', 'LLMs']"
-                link="https://growthpurple.com/"
-              />
-              <ExperienceCard 
-                role="Research Intern"
-                company="IIT Guwahati"
-                period="May 2023 – July 2023"
-                description="Accelerated Deep Neural Network inference on NoC architectures using Timeloop, C++ and Python. Contributed to AI hardware-software co-design."
-                :achievements="[
-                  'Achieved 23% latency reduction via optimized data mapping',
-                  'Built NoC simulation models for workload testing',
-                  'Contributed to research on AI accelerator design'
-                ]"
-                :tags="['C++', 'Python', 'Timeloop', 'NoC Architecture']"
-                link="https://iitg.ac.in/cseweb/marslab/"
-              />
           </div>
         </section>
 
@@ -474,33 +336,9 @@ useHead({
           
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <ProjectCard 
-                  title="DeoAI"
-                  description="Modular pipeline to transform scripts into faceless videos with AI-generated visuals and voiceovers."
-                  :tags="['Python', 'PyTorch', 'Diffusers', 'FFmpeg']"
-                  link="https://github.com/adawatia/deoAI"
-                  class="transform hover:rotate-1"
-              />
-              <ProjectCard 
-                  title="PaperWise"
-                  description="Engineered an intelligent PDF assistant using PySide6, Ollama, and PyMuPDF for seamless document interaction, smart Q&A, and offline AI processing."
-                  :tags="['PySide6', 'Ollama', 'PyMuPDF', 'Requests']"
-                  link="https://github.com/adawatia/PaperWise"
-                  class="transform hover:-rotate-1"
-              />
-              <ProjectCard 
-                  title="Kuebiko Comics"
-                  description="Full-stack comic platform connecting independent Indian artists with readers. Features auth, RBAC, and neobrutalist design."
-                  :tags="['Vue.js', 'FastAPI', 'PostgreSQL', 'Render','ImageKit']"
-                  link="https://comic-eight-dusky.vercel.app/"
-                  class="transform hover:rotate-1"
-                  wip
-              />
-               <ProjectCard 
-                  title="Big Defend"
-                  description="An open-source real-time Cybersecurity incident response system using Big Data."
-                  :tags="['NumPy', 'Nmap', 'Requests', 'Scapy', 'Scikit-learn']"
-                  link="https://github.com/adawatia/BigDefend"
-                  class="transform hover:rotate-1"
+                  v-for="(project, index) in projects"
+                  :key="index"
+                  v-bind="project"
               />
           </div>
         </section>
@@ -516,20 +354,10 @@ useHead({
             </h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <PublicationCard 
-                title="A Cloud-Based Telemedicine Platform: Enhancing Healthcare Accessibility through Technology"
-                venue="IEEE Computer Society (IEEE Xplore)"
-                type="Conference"
-                date="December 2024"
-                link="https://ieeexplore.ieee.org/abstract/document/10974157"
+                v-for="(pub, index) in publications"
+                :key="index"
+                v-bind="pub"
               />
-               <PublicationCard 
-                title="Efficient Parking & Toll Management: A RFID-Enabled Approach with Vega Aries Development Board"
-                venue="International Journal of Innovative Science and Research Technology"
-                type="Journal"
-                date="November 2023"
-                link="https://zenodo.org/records/10251059"
-              />
-
             </div>
           </section>
 
@@ -542,33 +370,12 @@ useHead({
             </h3>
             <div class="cartoon-box p-6 bg-pop-yellow/10">
               <ul class="space-y-4">
-                  <li class="flex items-center gap-3 font-bold text-sm">
-                    <UTooltip ignore-non-keyboard-focus text="Verified Credential">
+                  <li v-for="cert in certifications" :key="cert.name" class="flex items-center gap-3 font-bold text-sm">
+                    <UTooltip ignore-non-keyboard-focus :text="cert.tooltip">
                        <div class="flex items-center gap-3 cursor-default">
-                         <UIcon name="i-heroicons-check-badge-solid" class="w-5 h-5 text-pop-purple" /> Summer School on AI (UUST Russia)
+                         <UIcon name="i-heroicons-check-badge-solid" class="w-5 h-5 text-pop-purple" /> {{ cert.name }}
                        </div>
                     </UTooltip>
-                </li>
-                <li class="flex items-center gap-3 font-bold text-sm">
-                  <UTooltip ignore-non-keyboard-focus text="Verified Credential">
-                     <div class="flex items-center gap-3 cursor-default">
-                       <UIcon name="i-heroicons-check-badge-solid" class="w-5 h-5 text-pop-purple" /> AWS Cloud Architecting (AWS Academy)
-                     </div>
-                  </UTooltip>
-                </li>
-                <li class="flex items-center gap-3 font-bold text-sm">
-                  <UTooltip ignore-non-keyboard-focus text="Verified Credential">
-                     <div class="flex items-center gap-3 cursor-default">
-                       <UIcon name="i-heroicons-check-badge-solid" class="w-5 h-5 text-pop-purple" /> ROBO AI Diamond Cert
-                     </div>
-                  </UTooltip>
-                </li>
-                <li class="flex items-center gap-3 font-bold text-sm">
-                   <UTooltip ignore-non-keyboard-focus text="Verified Credential">
-                     <div class="flex items-center gap-3 cursor-default">
-                       <UIcon name="i-heroicons-check-badge-solid" class="w-5 h-5 text-pop-purple" /> Data Science using R (Chandigarh Univ)
-                     </div>
-                   </UTooltip>
                 </li>
               </ul>
             </div>

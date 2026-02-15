@@ -1,0 +1,7 @@
+export * from './tech'
+export * from './education'
+export * from './experience'
+export * from './projects'
+export * from './publications'
+export * from './certifications'
+export * from './seo'
