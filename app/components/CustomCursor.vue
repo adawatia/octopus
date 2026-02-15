@@ -19,34 +19,43 @@ const x = ref(typeof window !== 'undefined' ? window.innerWidth / 2 : 0)
 const y = ref(typeof window !== 'undefined' ? window.innerHeight / 2 : 0)
 const isHovering = ref(false)
 
+// Use requestAnimationFrame for performance (throttles to 60fps max)
+let rafId = null
+
 const updatePosition = (e) => {
   if (!e) return
   
-  x.value = e.clientX
-  y.value = e.clientY
+  // Only schedule one animation frame at a time
+  if (rafId) return
   
-  // Check if hovering over clickable elements with proper null checks
-  const target = e.target
-  if (target) {
-    const isClickable = target.tagName === 'A' || 
-                       target.tagName === 'BUTTON' || 
-                       target.closest?.('a') || 
-                       target.closest?.('button')
-    isHovering.value = Boolean(isClickable)
-  } else {
-    isHovering.value = false
-  }
+  rafId = requestAnimationFrame(() => {
+    x.value = e.clientX
+    y.value = e.clientY
+    
+    // Optimized element check using matches API
+    const target = e.target
+    if (target) {
+      // More efficient check using matches() instead of multiple closests()
+      isHovering.value = target?.matches?.('a, button, [role="button"]') || 
+                         target?.closest?.('a, button, [role="button"]') !== null
+    } else {
+      isHovering.value = false
+    }
+    
+    rafId = null
+  })
 }
 
-let mounted = false
-
 onMounted(() => {
-  mounted = true
-  window.addEventListener('mousemove', updatePosition)
+  // Use passive event listener for better scrolling performance
+  window.addEventListener('mousemove', updatePosition, { passive: true })
 })
 
 onUnmounted(() => {
-  mounted = false
+  if (rafId) {
+    cancelAnimationFrame(rafId)
+  }
   window.removeEventListener('mousemove', updatePosition)
 })
 </script>
+

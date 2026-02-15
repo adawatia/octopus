@@ -1,12 +1,15 @@
 <template>
   <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border-2 border-black shadow-hover hover:-translate-y-1 hover:shadow-hard transition-all duration-200 cursor-default select-none">
-    <img 
+    <NuxtImg 
       v-if="isValidUrl(icon)" 
       :src="icon" 
       :alt="`${name} logo`" 
       class="w-5 h-5 object-contain" 
-      @error="handleImageError"
+      format="webp,avif"
+      sizes="20px"
+      placeholder
       loading="lazy"
+      @error="handleImageError"
     />
     <UIcon v-else :name="imageError ? 'i-heroicons-cube' : icon" class="w-5 h-5" dynamic />
     <span class="font-bold text-sm">{{ name }}</span>

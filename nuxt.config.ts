@@ -4,7 +4,13 @@ const basePath = process.env.NODE_ENV === 'production' ? '/octopus/' : '/'
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/ui'],
+  modules: ['@nuxt/ui', '@nuxt/image'],
+  
+  image: {
+    domains: ['cdn.brandfetch.io', 'github.com'],
+    formats: ['webp', 'avif'],
+  },
+  
   srcDir: 'app',
   css: ['~/assets/css/main.css'],
   
@@ -60,6 +66,18 @@ export default defineNuxtConfig({
         // { name: 'google-site-verification', content: 'YOUR_VERIFICATION_CODE' },
       ],
       link: [
+        // Resource hints for performance
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+        { rel: 'dns-prefetch', href: 'https://cdn.brandfetch.io' },
+        
+        // Font stylesheet (loaded after preconnect for optimal performance)
+        { 
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Bricolage+Grotesque:wght@400;700;800&display=swap'
+        },
+        
+        // SEO and favicons
         { rel: 'canonical', href: 'https://adawatia.github.io/octopus/' },
         { rel: 'icon', type: 'image/x-icon', href: `${basePath}favicon.ico` },
         { rel: 'apple-touch-icon', sizes: '180x180', href: `${basePath}apple-touch-icon.png` },
@@ -68,6 +86,39 @@ export default defineNuxtConfig({
         { rel: 'manifest', href: `${basePath}site.webmanifest` }
       ]
     }
+  },
+  
+  // Vite Build Optimizations
+  vite: {
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            // Split vendor chunks for better caching
+            'vendor-icons': [
+              '@iconify-json/fluent-emoji',
+              '@iconify-json/heroicons', 
+              '@iconify-json/logos',
+              '@iconify-json/lucide',
+            ],
+          },
+        },
+      },
+    },
+    optimizeDeps: {
+      include: ['canvas-confetti'], // Pre-bundle for faster dev
+    },
+  },
+  
+  // Nitro Optimizations
+  nitro: {
+    compressPublicAssets: true, // Enable gzip/brotli
+    minify: true,
+  },
+  
+  // Experimental Features
+  experimental: {
+    payloadExtraction: true, // Extract payload to separate files
   },
   
   // Enable static site generation
