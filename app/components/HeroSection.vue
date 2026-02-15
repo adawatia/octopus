@@ -33,6 +33,7 @@ const scrollToSection = (sectionId: string) => {
     </p>
     
     <div class="flex flex-col md:flex-row gap-3 md:gap-4 animate-enter delay-300 w-full md:w-auto px-4">
+      <UTooltip ignore-non-keyboard-focus text="Check my work experience">
       <a 
         @click.prevent="scrollToSection('experience')"
         href="#experience"
@@ -40,6 +41,7 @@ const scrollToSection = (sectionId: string) => {
       >
         VIEW MY QUESTS <UIcon name="i-heroicons-arrow-down-circle-solid" class="w-5 h-5 md:w-6 md:h-6 ml-2" />
       </a>
+      </UTooltip>
         <UTooltip ignore-non-keyboard-focus text="Check my Repos">
           <UButton 
           size="xl"
