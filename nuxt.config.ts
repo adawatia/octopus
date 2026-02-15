@@ -49,12 +49,17 @@ export default defineNuxtConfig({
         { property: 'og:description', content: 'AI Backend Engineer specializing in FastAPI, Django, AWS, and scalable cloud architecture. Building production-grade AI pipelines and robust backend solutions.' },
         { property: 'og:site_name', content: 'Devansh Sharma Portfolio' },
         { property: 'og:locale', content: 'en_US' },
+        { property: 'og:image', content: 'https://adawatia.github.io/octopus/android-chrome-512x512.png' },
+        { property: 'og:image:width', content: '512' },
+        { property: 'og:image:height', content: '512' },
+        { property: 'og:image:alt', content: 'Devansh Sharma Portfolio Logo' },
         
         // Twitter Card
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:url', content: 'https://adawatia.github.io/octopus/' },
         { name: 'twitter:title', content: 'Devansh Sharma (adawatia) - AI Backend Engineer' },
         { name: 'twitter:description', content: 'AI Backend Engineer specializing in FastAPI, Django, AWS, and scalable cloud architecture.' },
+        { name: 'twitter:image', content: 'https://adawatia.github.io/octopus/android-chrome-512x512.png' },
         
         // Additional SEO
         { name: 'theme-color', content: '#FFD93D' },

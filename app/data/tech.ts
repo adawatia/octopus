@@ -11,6 +11,7 @@ export const techStack = [
   { name: 'MongoDB', icon: 'i-logos-mongodb-icon', class: 'bg-green-50' },
   { name: 'ImageKit', icon: 'https://cdn.brandfetch.io/id8c1BII23/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1712150692788', class: 'bg-blue-50' },
   { name: 'LangChain', icon: 'i-heroicons-link-solid', class: 'bg-green-50' },
-  { name: 'React', icon: 'i-logos-react', class: 'bg-cyan-50' },
+  { name: 'Vue', icon: 'i-logos-vue', class: 'bg-green-50' },
+  { name: 'Nuxt', icon: 'i-logos-nuxt-icon', class: 'bg-green-50' },
   { name: 'Streamlit', icon: 'https://cdn.brandfetch.io/idiyFucwEQ/theme/dark/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1668515715588', class: 'bg-red-50' },
 ]
