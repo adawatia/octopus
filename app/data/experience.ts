@@ -2,7 +2,7 @@ export const experience = [
     {
         role: 'Artificial Intelligence Engineer Intern',
         company: 'Zryth Solutions',
-        period: 'Oct 2025 – Present',
+        period: 'Oct 2025 – Feb 2026',
         description: 'Designed robust backend services and orchestrated scalable AI workloads on AWS.',
         achievements: [
             'Designed robust backend services using FastAPI and Django',
