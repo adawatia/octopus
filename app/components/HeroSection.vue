@@ -58,7 +58,7 @@ const scrollToSection = (sectionId: string) => {
           <UButton 
           size="xl"
           variant="ghost"
-          class="rounded-xl border-[3px] border-black bg-pop-cyan text-black font-bold text-base md:text-lg px-6 md:px-8 py-3 shadow-hard hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all w-full md:w-auto justify-center"
+          class="rounded-xl border-[3px] border-black bg-pop-cyan text-black font-bold text-base md:text-lg px-6 md:px-8 py-3 shadow-hard hover:shadow-none hover:bg-pop-cyan hover:translate-x-[4px] hover:translate-y-[4px] transition-all w-full md:w-auto justify-center"
           :to="resumeLink"
           target="_blank"
           rel="noopener noreferrer"
