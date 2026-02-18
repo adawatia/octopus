@@ -147,6 +147,16 @@ onMounted(() => {
 
         <!-- Mobile Floating Bottom Navbar -->
         <nav class="md:hidden fixed bottom-4 left-4 right-4 z-50 cartoon-box bg-white p-2.5 flex justify-around items-center gap-1">
+          <!-- DEV_FOLIO Badge on Corner -->
+          <div 
+             @click="triggerCelebration"
+             class="absolute -top-3 -left-2 z-50 cursor-pointer active:scale-95 transition-transform select-none"
+          >
+            <div class="text-[10px] font-black cartoon-title bg-pop-yellow border-2 border-black shadow-hover px-2 py-1 -rotate-6 whitespace-nowrap">
+              DEV_FOLIO
+            </div>
+          </div>
+
           <a @click.prevent="scrollToSection('about')" href="#about" class="flex flex-col items-center gap-0.5 text-[10px] font-bold hover:text-pop-cyan transition-colors active:scale-95 flex-1 cursor-pointer">
             <UIcon name="i-heroicons-user-circle-solid" class="w-5 h-5" />
             <span>ABOUT</span>
@@ -155,17 +165,6 @@ onMounted(() => {
             <UIcon name="i-heroicons-bolt-solid" class="w-5 h-5" />
             <span>QUESTS</span>
           </a>
-          
-          <!-- DEV_FOLIO Logo in Center -->
-          <div 
-             @click="triggerCelebration"
-             class="flex flex-col items-center justify-center px-2 flex-1 cursor-pointer active:scale-95 transition-transform select-none"
-          >
-            <div class="text-xs font-black cartoon-title bg-pop-yellow border-2 border-black shadow-hover px-2 py-0.5 -rotate-2 whitespace-nowrap">
-              DEV_FOLIO
-            </div>
-          </div>
-          
           <a @click.prevent="scrollToSection('work')" href="#work" class="flex flex-col items-center gap-0.5 text-[10px] font-bold hover:text-pop-yellow transition-colors active:scale-95 flex-1 cursor-pointer">
             <UIcon name="i-heroicons-rocket-launch-solid" class="w-5 h-5" />
             <span>PROJECTS</span>
