@@ -127,7 +127,7 @@ onMounted(() => {
           <div class="absolute inset-0 bg-dots pointer-events-none"></div>
       </div>
       
-      <main class="container mx-auto px-4 md:px-6 pt-16 md:pt-20 relative z-10 max-w-6xl pb-24 md:pb-8">
+      <main class="container mx-auto px-4 md:px-6 pt-12 md:pt-16 relative z-10 max-w-6xl pb-24 md:pb-8">
         <!-- Desktop Navbar -->
         <nav class="hidden md:flex justify-between items-center mb-20 cartoon-box p-4 bg-white sticky top-4 z-50">
           <h1 

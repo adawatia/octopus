@@ -14,7 +14,7 @@ const scrollToSection = (sectionId: string) => {
 </script>
 
 <template>
-  <header class="min-h-[50vh] md:min-h-[60vh] flex flex-col justify-center items-center text-center mb-16 md:mb-32 relative px-2 mt-12 md:mt-0">
+  <header class="min-h-[50vh] md:min-h-[60vh] flex flex-col justify-center items-center text-center mb-16 md:mb-32 relative px-2 mt-4 md:mt-0">
     <div class="absolute top-10 left-10 w-16 h-16 bg-pop-purple rounded-full border-[3px] border-black shadow-hard animate-bounce delay-75 hidden lg:block opacity-20"></div>
     <div class="absolute bottom-20 right-20 w-12 h-12 bg-pop-orange rotate-12 border-[3px] border-black shadow-hard animate-pulse hidden lg:block opacity-20"></div>
 
