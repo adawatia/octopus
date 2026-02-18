@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   
   image: {
     domains: ['cdn.brandfetch.io', 'github.com'],
-    formats: ['webp', 'avif'],
+
   },
   
   srcDir: 'app',
@@ -133,11 +133,5 @@ export default defineNuxtConfig({
   ssr: false,
   
   // Prerender the home page for better SEO
-  nitro: {
-    compressPublicAssets: true, // Enable gzip/brotli
-    minify: true,
-    prerender: {
-      routes: ['/']
-    }
-  },
+
 })
