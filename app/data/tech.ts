@@ -14,4 +14,6 @@ export const techStack = [
   { name: 'Vue', icon: 'i-logos-vue', class: 'bg-green-50' },
   { name: 'Nuxt', icon: 'i-logos-nuxt-icon', class: 'bg-green-50' },
   { name: 'Streamlit', icon: 'https://cdn.brandfetch.io/idiyFucwEQ/theme/dark/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1668515715588', class: 'bg-red-50' },
+  { name: 'Google ADK', icon: 'i-logos-google-icon', class: 'bg-blue-50' },
+  { name: 'Tailwind CSS', icon: 'i-logos-tailwindcss-icon', class: 'bg-cyan-50' },
 ]
