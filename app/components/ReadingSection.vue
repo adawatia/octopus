@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { readingList } from '~/data'
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 
 const filterStatus = ref('All')
 const statuses = ['All', 'Reading', 'Read', 'To Read', 'Dropped', 'On Hold']
@@ -11,14 +11,31 @@ const filteredReadingList = computed(() => {
 })
 
 // Pagination
+// Pagination
 const currentPage = ref(1)
-const itemsPerPage = 6
+const itemsPerPage = ref(6)
 
-const totalPages = computed(() => Math.ceil(filteredReadingList.value.length / itemsPerPage))
+// Responsive items per page
+const updateItemsPerPage = () => {
+    if (typeof window !== 'undefined') {
+        itemsPerPage.value = window.innerWidth < 768 ? 3 : 6
+    }
+}
+
+onMounted(() => {
+    updateItemsPerPage()
+    window.addEventListener('resize', updateItemsPerPage)
+})
+
+onUnmounted(() => {
+    window.removeEventListener('resize', updateItemsPerPage)
+})
+
+const totalPages = computed(() => Math.ceil(filteredReadingList.value.length / itemsPerPage.value))
 
 const paginatedList = computed(() => {
-  const start = (currentPage.value - 1) * itemsPerPage
-  const end = start + itemsPerPage
+  const start = (currentPage.value - 1) * itemsPerPage.value
+  const end = start + itemsPerPage.value
   return filteredReadingList.value.slice(start, end)
 })
 
@@ -38,13 +55,12 @@ watch(filterStatus, () => {
 const getFilterColor = (status: string) => {
     const s = status.toLowerCase()
     if (s === 'dropped') return 'bg-pop-orange text-white'
-    if (s === 'on hold') return 'bg-gray-200 text-black'
     return 'bg-pop-yellow text-black'
 }
 </script>
 
 <template>
-  <section id="reading" class="mb-16 md:mb-32 scroll-mt-24">
+  <section id="reading" class="mb-8 md:mb-16 scroll-mt-24">
     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 md:mb-12">
         <h3 class="text-2xl md:text-3xl font-black cartoon-title flex items-center gap-3 md:gap-4">
           <div class="w-12 h-12 bg-pop-orange rounded-lg border-[3px] border-black shadow-hard flex items-center justify-center text-white">
@@ -67,7 +83,7 @@ const getFilterColor = (status: string) => {
         </div>
     </div>
     
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 min-h-[400px]">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
       <TransitionGroup name="list">
         <ReadingCard 
             v-for="(item, index) in paginatedList"

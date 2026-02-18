@@ -170,6 +170,10 @@ onMounted(() => {
             <UIcon name="i-heroicons-rocket-launch-solid" class="w-5 h-5" />
             <span>PROJECTS</span>
           </a>
+          <a @click.prevent="scrollToSection('reading')" href="#reading" class="flex flex-col items-center gap-0.5 text-[10px] font-bold hover:text-pop-pink transition-colors active:scale-95 flex-1 cursor-pointer">
+            <UIcon name="i-heroicons-book-open-solid" class="w-5 h-5" />
+            <span>LIBRARY</span>
+          </a>
           <a @click.prevent="scrollToSection('blog')" href="#blog" class="flex flex-col items-center gap-0.5 text-[10px] font-bold hover:text-pop-orange transition-colors active:scale-95 flex-1 cursor-pointer">
             <UIcon name="i-heroicons-pencil-square-solid" class="w-5 h-5" />
             <span>BLOG</span>

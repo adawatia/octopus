@@ -82,7 +82,6 @@ const isValidLink = computed(() => {
 const statusColor = computed(() => {
     const s = props.status.toLowerCase()
     if (s === 'dropped') return 'bg-pop-orange text-white'
-    if (s === 'on hold') return 'bg-gray-200 text-black'
     return 'bg-pop-yellow text-black'
 })
 
