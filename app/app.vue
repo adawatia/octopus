@@ -140,6 +140,7 @@ onMounted(() => {
             <a @click.prevent="scrollToSection('about')" href="#about" class="hover:text-pop-purple hover:underline decoration-4 underline-offset-4 decoration-pop-cyan transition-all cursor-pointer">ABOUT</a>
             <a @click.prevent="scrollToSection('experience')" href="#experience" class="hover:text-pop-purple hover:underline decoration-4 underline-offset-4 decoration-pop-pink transition-all cursor-pointer">QUESTS</a>
             <a @click.prevent="scrollToSection('work')" href="#work" class="hover:text-pop-purple hover:underline decoration-4 underline-offset-4 decoration-pop-yellow transition-all cursor-pointer">PROJECTS</a>
+            <a @click.prevent="scrollToSection('reading')" href="#reading" class="hover:text-pop-purple hover:underline decoration-4 underline-offset-4 decoration-pop-pink transition-all cursor-pointer">LIBRARY</a>
             <a @click.prevent="scrollToSection('blog')" href="#blog" class="hover:text-pop-purple hover:underline decoration-4 underline-offset-4 decoration-pop-orange transition-all cursor-pointer">BLOG</a>
           </div>
         </nav>
@@ -181,6 +182,7 @@ onMounted(() => {
           <LazyExperienceSection />
           <LazyProjectsSection />
           <LazyPublicationsSection />
+          <LazyReadingSection />
           <LazyBlogSection />
           <LazyFooterSection />
 
