@@ -134,7 +134,7 @@ onMounted(() => {
             @click="triggerCelebration" 
             class="text-xl md:text-2xl font-black cartoon-title bg-pop-yellow border-2 border-black shadow-hover px-3 py-1 -rotate-2 cursor-pointer active:scale-95 transition-transform select-none"
           >
-              DEV_FOLIO
+              ADAWATIA
           </h1>
           <div class="flex gap-6 font-bold text-sm">
             <a @click.prevent="scrollToSection('about')" href="#about" class="hover:text-pop-purple hover:underline decoration-4 underline-offset-4 decoration-pop-cyan transition-all cursor-pointer">ABOUT</a>
@@ -147,13 +147,13 @@ onMounted(() => {
 
         <!-- Mobile Floating Bottom Navbar -->
         <nav class="md:hidden fixed bottom-4 left-4 right-4 z-50 cartoon-box bg-white p-2.5 flex justify-around items-center gap-1">
-          <!-- DEV_FOLIO Badge on Corner -->
+          <!-- ADAWATIA Badge on Corner -->
           <div 
              @click="triggerCelebration"
              class="absolute -top-3 -left-2 z-50 cursor-pointer active:scale-95 transition-transform select-none"
           >
             <div class="text-[10px] font-black cartoon-title bg-pop-yellow border-2 border-black shadow-hover px-2 py-1 -rotate-6 whitespace-nowrap">
-              DEV_FOLIO
+              ADAWATIA
             </div>
           </div>
 
