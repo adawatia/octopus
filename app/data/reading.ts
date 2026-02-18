@@ -12,6 +12,60 @@ export const readingList = [
         title: 'System Design for Beginners',
         author: 'Arpit Bhayani',
         type: 'Course',
+        status: 'To Read',
+        rating: 0,
+        link: 'https://arpitbhayani.me/system-design-for-beginners',
+        summary: 'A comprehensive guide to understanding the fundamentals of system design and software architecture.'
+    },
+    {
+        title: 'System Design for Beginners',
+        author: 'Arpit Bhayani',
+        type: 'Course',
+        status: 'On Hold',
+        rating: 0,
+        link: 'https://arpitbhayani.me/system-design-for-beginners',
+        summary: 'A comprehensive guide to understanding the fundamentals of system design and software architecture.'
+    },
+    {
+        title: 'System Design for Beginners',
+        author: 'Arpit Bhayani',
+        type: 'Course',
+        status: 'Dropped',
+        rating: 0,
+        link: 'https://arpitbhayani.me/system-design-for-beginners',
+        summary: 'A comprehensive guide to understanding the fundamentals of system design and software architecture.'
+    },
+    {
+        title: 'System Design for Beginners',
+        author: 'Arpit Bhayani',
+        type: 'Course',
+        status: 'Reading',
+        rating: 0,
+        link: 'https://arpitbhayani.me/system-design-for-beginners',
+        summary: 'A comprehensive guide to understanding the fundamentals of system design and software architecture.'
+    },
+    {
+        title: 'System Design for Beginners',
+        author: 'Arpit Bhayani',
+        type: 'Course',
+        status: 'Reading',
+        rating: 0,
+        link: 'https://arpitbhayani.me/system-design-for-beginners',
+        summary: 'A comprehensive guide to understanding the fundamentals of system design and software architecture.'
+    },
+    {
+        title: 'System Design for Beginners',
+        author: 'Arpit Bhayani',
+        type: 'Course',
+        status: 'Reading',
+        rating: 0,
+        link: 'https://arpitbhayani.me/system-design-for-beginners',
+        summary: 'A comprehensive guide to understanding the fundamentals of system design and software architecture.'
+    },
+    {
+        title: 'System Design for Beginners',
+        author: 'Arpit Bhayani',
+        type: 'Course',
         status: 'Reading',
         rating: 0,
         link: 'https://arpitbhayani.me/system-design-for-beginners',

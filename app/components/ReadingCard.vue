@@ -19,7 +19,7 @@
       <div class="flex flex-col h-full mt-2">
         <!-- Type -->
         <div class="mb-2">
-            <span class="bg-black text-white px-2 py-0.5 text-xs font-black uppercase tracking-wider rounded">{{ type }}</span>
+            <span class="px-2 py-0.5 text-xs font-black uppercase tracking-wider rounded border border-black shadow-hover" :class="typeColor">{{ type }}</span>
         </div>
 
         <!-- Title -->
@@ -81,10 +81,15 @@ const isValidLink = computed(() => {
 
 const statusColor = computed(() => {
     const s = props.status.toLowerCase()
-    if (s === 'reading') return 'bg-pop-yellow text-black'
-    if (s === 'read') return 'bg-pop-cyan text-white'
     if (s === 'dropped') return 'bg-pop-orange text-white'
-    if (s === 'on hold') return 'bg-gray-200 text-gray-800'
-    return 'bg-white text-black'
+    if (s === 'on hold') return 'bg-gray-200 text-black'
+    return 'bg-pop-yellow text-black'
+})
+
+const typeColor = computed(() => {
+    const t = props.type.toLowerCase()
+    if (t === 'book') return 'bg-pop-cyan text-white'
+    if (t === 'course') return 'bg-pop-purple text-white'
+    return 'bg-black text-white'
 })
 </script>
