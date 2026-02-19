@@ -31,10 +31,12 @@ export const experience = [
         role: 'Research Intern',
         company: 'IIT Guwahati',
         period: 'May 2023 – July 2023',
-        description: 'Accelerated Deep Neural Network inference on NoC architectures using Timeloop, C++ and Python.',
+        description: 'Accelerated Deep Neural Network inference on NoC architectures using Timeloop, C++ and Python. Contributed to AI hardware-software co-design.',
         achievements: [
             'Accelerated DNN inference on Network-on-Chip (NoC) architectures using Timeloop, C++, and Python',
-            'Achieved 23% latency reduction through optimized data mapping and efficient memory scheduling'
+            '23% latency reduction via optimized data mapping and efficient memory scheduling',
+            'Built NoC simulation models for workload testing',
+            'Contributed to research on AI accelerator design'
         ],
         tags: ['C++', 'Python', 'Timeloop', 'NoC Architecture'],
         link: 'https://iitg.ac.in/cseweb/marslab/'
