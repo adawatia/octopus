@@ -1,15 +1,15 @@
 export const projects = [
     {
         title: 'DeoAI',
-        description: 'Modular pipeline to transform scripts into faceless videos with AI-generated visuals and voiceovers.',
+        description: 'Built a modular pipeline to transform scripts into faceless videos with AI-generated visuals and voiceovers.',
         tags: ['Python', 'PyTorch', 'Diffusers', 'FFmpeg'],
         link: 'https://github.com/adawatia/deoAI',
         class: 'transform hover:rotate-1'
     },
     {
         title: 'PaperWise',
-        description: 'Engineered an intelligent PDF assistant using PySide6, Ollama, and PyMuPDF for seamless document interaction, smart Q&A, and offline AI processing.',
-        tags: ['PySide6', 'Ollama', 'PyMuPDF', 'Requests'],
+        description: 'Engineered an intelligent PDF assistant for seamless document interaction, smart Q&A, and offline AI processing.',
+        tags: ['PySide6', 'Ollama', 'PyMuPDF','LangChain'],
         link: 'https://github.com/adawatia/PaperWise',
         class: 'transform hover:-rotate-1'
     },
@@ -23,8 +23,8 @@ export const projects = [
     },
     {
         title: 'Big Defend',
-        description: 'An open-source real-time Cybersecurity incident response system using Big Data.',
-        tags: ['NumPy', 'Nmap', 'Requests', 'Scapy', 'Scikit-learn'],
+        description: 'Developed an open-source real-time cybersecurity incident response system using Big Data technologies.',
+        tags: ['NumPy', 'Nmap', 'Scapy', 'Scikit-learn'],
         link: 'https://github.com/adawatia/BigDefend',
         class: 'transform hover:rotate-1'
     }

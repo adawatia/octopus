@@ -5,35 +5,34 @@ export const experience = [
         period: 'Oct 2025 – Feb 2026',
         description: 'Designed robust backend services and orchestrated scalable AI workloads on AWS.',
         achievements: [
-            'Designed robust backend services using FastAPI and Django',
-            'Orchestrated AI workloads on AWS (Fargate, Step Functions, Lambda)',
-            'Containerized applications using Docker'
+            'Designed robust backend services using FastAPI and Django for automated book content proofreading',
+            'Orchestrated scalable AI workloads on AWS utilizing Fargate, Step Functions, and Lambda',
+            'Established portable deployment environments by containerizing applications using Docker'
         ],
-        tags: ['FastAPI', 'Fargate', 'Lambda', 'Docker'],
+        tags: ['FastAPI', 'Django', 'AWS', 'Docker'],
         link: 'https://www.zryth.com/'
     },
     {
-        role: 'Mentee (ML Engineering)',
+        role: 'ML Mentee (Trainee)',
         company: 'GrowthPurple Technologies',
-        period: 'June 2023 – October 2023',
+        period: 'Jun 2023 – Apr 2025',
         description: 'Engaged in a focused mentorship experience, actively participating in the development of a PDF chatbot using LLMs, Streamlit, and LangChain for real-time document interaction.',
         achievements: [
-            '90% accuracy on complex PDF formats',
-            'Integrated RAG for better context retrieval',
-            'Reduced support tickets by 35%'
+            'Developed a real-time document interaction backend using LangChain and LLMs with a Streamlit interface',
+            'Implemented RAG (Retrieval-Augmented Generation) architectures to enhance context retrieval accuracy',
+            'Collaborated with senior engineers to streamline model deployment pipelines'
         ],
-        tags: ['Python', 'Streamlit', 'LangChain', 'Hugging Face', 'LLMs'],
+        tags: ['Python', 'Streamlit', 'LangChain', 'LLMs'],
         link: 'https://growthpurple.com/'
     },
     {
         role: 'Research Intern',
         company: 'IIT Guwahati',
         period: 'May 2023 – July 2023',
-        description: 'Accelerated Deep Neural Network inference on NoC architectures using Timeloop, C++ and Python. Contributed to AI hardware-software co-design.',
+        description: 'Accelerated Deep Neural Network inference on NoC architectures using Timeloop, C++ and Python.',
         achievements: [
-            'Achieved 23% latency reduction via optimized data mapping',
-            'Built NoC simulation models for workload testing',
-            'Contributed to research on AI accelerator design'
+            'Accelerated DNN inference on Network-on-Chip (NoC) architectures using Timeloop, C++, and Python',
+            'Achieved 23% latency reduction through optimized data mapping and efficient memory scheduling'
         ],
         tags: ['C++', 'Python', 'Timeloop', 'NoC Architecture'],
         link: 'https://iitg.ac.in/cseweb/marslab/'

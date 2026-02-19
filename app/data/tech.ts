@@ -3,6 +3,7 @@ export const techStack = [
   { name: 'FastAPI', icon: 'i-logos-fastapi-icon', class: 'bg-teal-50' },
   { name: 'Django', icon: 'i-logos-django-icon', class: 'bg-green-50' },
   { name: 'C++', icon: 'i-logos-c-plusplus', class: 'bg-blue-50' },
+  { name: 'PyTorch', icon: 'i-logos-pytorch-icon', class: 'bg-orange-50' },
   { name: 'AWS', icon: 'i-logos-aws', class: 'bg-yellow-50' },
   { name: 'GCP', icon: 'i-logos-google-cloud', class: 'bg-red-50' },
   { name: 'Docker', icon: 'i-logos-docker-icon', class: 'bg-blue-50' },
@@ -16,4 +17,6 @@ export const techStack = [
   { name: 'Streamlit', icon: 'https://cdn.brandfetch.io/idiyFucwEQ/theme/dark/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1668515715588', class: 'bg-red-50' },
   { name: 'Google ADK', icon: 'i-logos-google-icon', class: 'bg-blue-50' },
   { name: 'Tailwind CSS', icon: 'i-logos-tailwindcss-icon', class: 'bg-cyan-50' },
+  { name: 'Ollama', icon: 'https://github.com/ollama.png', class: 'bg-gray-50' },
+  { name: 'Hugging Face', icon: 'i-logos-hugging-face-icon', class: 'bg-yellow-50' },
 ]
