@@ -11,7 +11,7 @@ export const experience = [
             'Orchestrated scalable AI microservices and automated proofreading pilots on AWS Fargate, Step Functions, and GCP, integrating Google ADK for new product development',
             'Developed a specialized Django CRM to manage inventory and streamline the manufacturing workflow for silver jewelry processing'
         ],
-        tags: ['FastAPI', 'Django', 'AWS Fargate', 'Step Functions', 'GCP', 'Elasticsearch', 'Gemini'],
+        tags: ['FastAPI', 'Django', 'AWS Fargate', 'AWS Step Functions', 'GCP', 'Elasticsearch', 'Gemini'],
         link: 'https://www.zryth.com/'
     },
     {
