@@ -3,7 +3,6 @@ export const techStack = [
   { name: 'FastAPI', icon: 'i-logos-fastapi-icon', class: 'bg-teal-50' },
   { name: 'Django', icon: 'i-logos-django-icon', class: 'bg-green-50' },
   { name: 'C++', icon: 'i-logos-c-plusplus', class: 'bg-blue-50' },
-  { name: 'PyTorch', icon: 'i-logos-pytorch-icon', class: 'bg-orange-50' },
   { name: 'AWS', icon: 'i-logos-aws', class: 'bg-yellow-50' },
   { name: 'GCP', icon: 'i-logos-google-cloud', class: 'bg-red-50' },
   { name: 'Docker', icon: 'i-logos-docker-icon', class: 'bg-blue-50' },
