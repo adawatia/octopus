@@ -48,7 +48,7 @@
             </div>
             
              <div v-if="isValidLink" class="text-xs font-black uppercase group-hover:underline decoration-2 underline-offset-2 flex items-center gap-1">
-                 View <UIcon name="i-heroicons-arrow-top-right-on-square-20-solid" class="w-3 h-3" />
+                 View <UIcon name="i-heroicons-arrow-top-right-on-square-20-solid" class="w-3 h-3 text-pop-purple" />
              </div>
         </div>
       </div>
