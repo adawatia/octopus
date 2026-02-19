@@ -3,13 +3,15 @@ export const experience = [
         role: 'Artificial Intelligence Engineer Intern',
         company: 'Zryth Solutions',
         period: 'Oct 2025 – Feb 2026',
-        description: 'Designed robust backend services and orchestrated scalable AI workloads on AWS.',
+        description: 'Led full-stack architecture overhaul and orchestrated scalable AI workloads, integrating advanced RAG pipelines and automated media generation.',
         achievements: [
-            'Designed robust backend services using FastAPI and Django for automated book content proofreading',
-            'Orchestrated scalable AI workloads on AWS utilizing Fargate, Step Functions, and Lambda',
-            'Established portable deployment environments by containerizing applications using Docker'
+            'Led a 3-member team to overhaul the full-stack architecture (FastAPI) of Oswaal AI; managed end-to-end system design, UI enhancements, and feature pipelines including a reporting module and prompt library',
+            'Managed advanced RAG pipelines (Elasticsearch, Qwen) and OCR data processing for educational content generation; drove a seamless LLM migration to Gemini, improving overall system efficiency by 24%',
+            'Designed automated media generation pipelines, utilizing Gemini and the Gamma API to dynamically synthesize scripts into presentations, alongside a custom Gemini-powered text-to-speech module for AI-generated podcasts',
+            'Orchestrated scalable AI microservices and automated proofreading pilots on AWS Fargate, Step Functions, and GCP, integrating Google ADK for new product development',
+            'Developed a specialized Django CRM to manage inventory and streamline the manufacturing workflow for silver jewelry processing'
         ],
-        tags: ['FastAPI', 'Django', 'AWS', 'Docker'],
+        tags: ['FastAPI', 'Django', 'AWS Fargate', 'Step Functions', 'GCP', 'Elasticsearch', 'Gemini'],
         link: 'https://www.zryth.com/'
     },
     {
