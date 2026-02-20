@@ -13,7 +13,7 @@
       <span>Projects</span>
     </a>
     <a href="#blog" class="nav-item">
-      <UIcon name="i-heroicons-pencil-square-solid" class="w-6 h-6" />
+      <UIcon name="i-heroicons-document-text-solid" class="w-6 h-6" />
       <span>Blog</span>
     </a>
   </nav>

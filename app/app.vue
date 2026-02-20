@@ -174,7 +174,7 @@ onMounted(() => {
             <span>LIBRARY</span>
           </a>
           <a @click.prevent="scrollToSection('blog')" href="#blog" class="flex flex-col items-center gap-0.5 text-[10px] font-bold hover:text-pop-orange transition-colors active:scale-95 flex-1 cursor-pointer">
-            <UIcon name="i-heroicons-pencil-square-solid" class="w-5 h-5" />
+            <UIcon name="i-heroicons-document-text-solid" class="w-5 h-5" />
             <span>BLOG</span>
           </a>
         </nav>
