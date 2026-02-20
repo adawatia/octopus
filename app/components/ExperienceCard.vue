@@ -29,14 +29,23 @@
     <div v-if="achievements && achievements.length" class="mb-4 bg-white/50 p-3 rounded-lg border-2 border-black/10">
       <div class="text-xs font-black uppercase tracking-wider mb-2 text-gray-500">Key Quests Completed:</div>
       <ul class="space-y-1.5 list-none">
-        <li v-for="(achievement, idx) in achievements" :key="idx" class="text-sm flex items-start gap-2">
-          <UIcon name="i-ph-lightning-fill" class="text-pop-purple w-4 h-4 mt-0.5" />
+        <li v-for="(achievement, idx) in displayAchievements" :key="idx" class="text-sm flex items-start gap-2">
+          <UIcon name="i-ph-lightning-fill" class="text-pop-purple min-w-4 w-4 h-4 mt-0.5" />
           <span>{{ achievement }}</span>
         </li>
       </ul>
+      <button 
+        v-if="hasMoreAchievements" 
+        @click="isExpanded = !isExpanded"
+        :aria-expanded="isExpanded"
+        class="mt-3 text-xs font-bold text-pop-purple hover:underline flex items-center gap-1 transition-colors focus:outline-none focus:ring-2 focus:ring-pop-purple rounded outline-none"
+      >
+        <span>{{ isExpanded ? 'Show Less' : `Show ${remainingCount} More` }}</span>
+        <UIcon :name="isExpanded ? 'i-heroicons-chevron-up' : 'i-heroicons-chevron-down'" class="w-4 h-4" />
+      </button>
     </div>
 
-    <div class="flex flex-wrap gap-2 mt-auto">
+    <div v-if="tags && tags.length" class="flex flex-wrap gap-2 mt-auto">
       <span v-for="tag in tags" :key="tag" class="text-xs font-bold px-2 py-0.5 border border-black rounded bg-white">
         {{ tag }}
       </span>
@@ -45,7 +54,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 
 const props = defineProps<{
   role: string
@@ -66,5 +75,25 @@ const isValidLink = computed(() => {
   } catch {
     return false
   }
+})
+
+const isExpanded = ref(false)
+const INITIAL_ACHIEVEMENTS_COUNT = 2
+
+const displayAchievements = computed(() => {
+  if (!props.achievements) return []
+  if (isExpanded.value || props.achievements.length <= INITIAL_ACHIEVEMENTS_COUNT) {
+    return props.achievements
+  }
+  return props.achievements.slice(0, INITIAL_ACHIEVEMENTS_COUNT)
+})
+
+const hasMoreAchievements = computed(() => {
+  return props.achievements && props.achievements.length > INITIAL_ACHIEVEMENTS_COUNT
+})
+
+const remainingCount = computed(() => {
+  if (!props.achievements) return 0
+  return Math.max(0, props.achievements.length - INITIAL_ACHIEVEMENTS_COUNT)
 })
 </script>
