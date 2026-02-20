@@ -38,7 +38,7 @@
         v-if="hasMoreAchievements" 
         @click="isExpanded = !isExpanded"
         :aria-expanded="isExpanded"
-        class="mt-3 text-xs font-bold text-pop-purple hover:underline flex items-center gap-1 transition-colors focus:outline-none focus:ring-2 focus:ring-pop-purple rounded outline-none"
+        class="mt-3 text-xs font-bold text-pop-purple hover:underline flex items-center gap-1 transition-colors focus:outline-none"
       >
         <span>{{ isExpanded ? 'Show Less' : `Show ${remainingCount} More` }}</span>
         <UIcon :name="isExpanded ? 'i-heroicons-chevron-up' : 'i-heroicons-chevron-down'" class="w-4 h-4" />
